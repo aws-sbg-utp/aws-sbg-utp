@@ -240,7 +240,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     id: 'juan-manuel-rojas',
     name: 'Juan Manuel Rojas Muñoz',
     role: 'Director of Marketing',
-    photoSrc: '/assets/photos/team/default.jpg',
+    photoSrc: '/assets/photos/team/juanmanuel.jpeg',
     photoAlt: 'Fotografía de Juan Manuel Rojas Muñoz',
     links: [
       { label: 'Enlace 1', url: '' },
@@ -276,7 +276,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     id: 'nohora-camila-cardozo',
     name: 'Nohora Camila Cardozo Cardenas',
     role: 'Technical Lead',
-    photoSrc: '/assets/photos/team/default.jpg',
+    photoSrc: '/assets/photos/team/nohora.jpeg',
     photoAlt: 'Fotografía de Nohora Camila Cardozo Cardenas',
     links: [
       { label: 'Enlace 1', url: '' },
