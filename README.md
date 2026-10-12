@@ -1,14 +1,15 @@
-# AWS Student Builder Group — UTP
+# AWS Student Builder Group at UTP
 
 Landing oficial del **AWS Student Builder Group** de la **Universidad Tecnológica de Pereira (UTP)**.
 
 ## Stack
 
-- **React + TypeScript** — interfaz
-- **Vite** — tooling y build
-- **Tailwind CSS v4** — estilos
-- **Framer Motion** — animaciones
+- **React 19 + TypeScript** — interfaz y lógica
+- **Vite** — tooling y bundler de producción
+- **Tailwind CSS v4** — diseño con tokens semánticos
+- **Framer Motion** — animaciones e interactividad (con soporte para `prefers-reduced-motion`)
 - **Lucide React** — iconos de interfaz
+- **Oxlint** — linter de código
 
 ## Desarrollo local
 
@@ -17,7 +18,7 @@ npm install
 npm run dev
 ```
 
-El servidor corre en `http://localhost:5173`.
+El servidor corre por defecto en `http://localhost:5173`.
 
 ## Build de producción
 
@@ -25,9 +26,9 @@ El servidor corre en `http://localhost:5173`.
 npm run build
 ```
 
-Los archivos de producción quedan en `dist/`.
+Genera el bundle estático optimizado en la carpeta `dist/`.
 
-## Lint
+## Linting
 
 ```bash
 npm run lint
@@ -38,63 +39,73 @@ npm run lint
 ```
 src/
 ├── components/
+│   ├── ui/               # Componentes reutilizables del sistema de diseño
+│   │   ├── SectionTag.tsx
+│   │   └── CtaButton.tsx
 │   ├── Navbar.tsx        # Navegación sticky con menú mobile
-│   ├── Hero.tsx          # Sección principal
-│   ├── About.tsx         # ¿Qué es el AWS SBG?
-│   ├── WhatWeDo.tsx      # Aprende · Construye · Conecta
-│   ├── LearningPath.tsx  # Nuestro camino (4 pasos)
-│   ├── Events.tsx        # Próximos eventos → Meetup
+│   ├── Hero.tsx          # Sección principal con terminal interactivo
+│   ├── About.tsx         # ¿Qué es el AWS SBG? y sello institucional
+│   ├── WhatWeDo.tsx      # Tres ejes: Aprende · Construye · Conecta
+│   ├── LearningPath.tsx  # Nuestro camino (roadmap progresivo)
+│   ├── Events.tsx        # Próximas actividades → Meetup
 │   ├── Community.tsx     # Canales de la comunidad
-│   ├── FinalCTA.tsx      # CTA final → WhatsApp
-│   ├── Footer.tsx        # Footer con links y branding
-│   └── AnimatedSection.tsx # Wrapper de animaciones scroll
+│   ├── Team.tsx          # Integrantes del equipo coordinador
+│   ├── FAQ.tsx           # Acordeón de preguntas frecuentes
+│   ├── FinalCTA.tsx      # CTA de cierre
+│   ├── Footer.tsx        # Pie de página con enlaces y branding
+│   └── AnimatedSection.tsx # Wrapper de animaciones con Framer Motion
 ├── data/
-│   └── content.ts        # Datos centralizados (links, bloques, pasos)
+│   └── content.ts        # Contenido centralizado (textos, FAQs, equipo, links)
+├── lib/
+│   └── motion.ts         # Tokens y variantes de animación
 ├── App.tsx               # Componente raíz
 ├── main.tsx              # Entry point
-└── index.css             # Diseño system (Tailwind v4 + tokens)
+└── index.css             # Sistema de diseño (Tailwind CSS v4 + tokens)
 
 public/
+├── robots.txt            # Directivas para motores de búsqueda
 └── assets/
-    ├── branding/         # Logos de AWS y SBG
-    ├── icons/            # Iconos pixelados del SBG
+    ├── branding/         # Logos de AWS, SBG y UTP
+    ├── icons/            # Iconos temáticos y vectoriales
+    │   ├── social/       # Logos de plataformas sociales
     │   ├── bolt-icons/
     │   ├── key-icons/
     │   ├── ladder-icons/
     │   ├── speaker-icons/
     │   ├── team-icons/
     │   └── trophy-icons/
-    ├── graphics/         # (vacío — reservado para futuro)
     └── photos/
-        ├── community/    # (vacío — reservado para futuro)
-        ├── events/       # (vacío — reservado para futuro)
-        └── team/         # (vacío — reservado para futuro)
+        └── team/         # Fotografías de los integrantes del equipo
 ```
 
-## Deployment en AWS Amplify Hosting
+## Despliegue en AWS Amplify Hosting
 
-El archivo `amplify.yml` ya está configurado. Para conectar el repositorio:
+El proyecto incluye el archivo `amplify.yml` configurado para despliegue estático continuo (CI/CD):
 
 1. Ir a [AWS Amplify Console](https://console.aws.amazon.com/amplify/)
-2. Seleccionar **New app → Host web app**
-3. Conectar el repositorio de GitHub
-4. Amplify detectará automáticamente el `amplify.yml`
-5. Deployar
+2. Seleccionar **Create new app → Host web app**
+3. Conectar el repositorio de GitHub (`aws-sbg-utp/aws-sbg-utp`, rama `main`)
+4. Amplify detectará automáticamente las configuraciones de compilación de `amplify.yml`
+5. Guardar y desplegar
 
-El dominio personalizado puede configurarse posteriormente desde la consola de Amplify.
+Cualquier `push` a la rama `main` generará un despliegue automático.
 
-## Links oficiales
+## Canales oficiales
 
-| Canal | URL |
-|-------|-----|
-| WhatsApp | https://chat.whatsapp.com/Gfa9nvt3lcn64qkplNHimA |
-| Meetup | https://www.meetup.com/aws-sbg-at-technological-university-of-pereira/ |
-| Instagram | https://www.instagram.com/aws.sbg.utp |
-| GitHub | https://github.com/aws-sbg-utp |
-| YouTube | https://www.youtube.com/@aws-sbg-utp |
-| LinkedIn | https://www.linkedin.com/company/146555980/ |
-| Email | aws.utp.sbg@gmail.com |
+| Canal | Enlace |
+|---|---|
+| **Meetup** | [aws-sbg-at-technological-university-of-pereira](https://www.meetup.com/aws-sbg-at-technological-university-of-pereira/) |
+| **WhatsApp** | [Chat de la comunidad](https://chat.whatsapp.com/Gfa9nvt3lcn64qkplNHimA) |
+| **Instagram** | [@aws.sbg.utp](https://www.instagram.com/aws.sbg.utp) |
+| **GitHub** | [aws-sbg-utp](https://github.com/aws-sbg-utp) |
+| **YouTube** | [@aws-sbg-utp](https://www.youtube.com/@aws-sbg-utp) |
+| **LinkedIn** | [AWS Student Builder Group UTP](https://www.linkedin.com/company/146555980/) |
+| **Email** | [aws.utp.sbg@gmail.com](mailto:aws.utp.sbg@gmail.com) |
+
+## Licencia
+
+Este proyecto se encuentra bajo la licencia **MIT**. Para más detalles, consulta el archivo [LICENSE](LICENSE).
 
 ---
 
-© 2026 AWS Student Builder Group — UTP
+© 2026 AWS Student Builder Group at UTP
