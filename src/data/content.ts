@@ -42,7 +42,7 @@ export const WHAT_WE_DO_BLOCKS: WhatWeDoBlock[] = [
     badge: 'EJE 01 // FUNDAMENTOS',
     title: 'Aprende',
     description:
-      'Talleres técnicos desde cero sobre conceptos fundamentales de nube y la iniciativa de formar grupos de estudio colaborativos para quienes tengan interés en profundizar hacia certificaciones como AWS Cloud Practitioner.',
+      'Espacios introductorios sobre computación en la nube y temas fundamentales de AWS para quienes inician o buscan profundizar en tecnología cloud.',
     iconSrc: '/assets/icons/ladder-icons/ladder-icon-blue.svg',
     iconAlt: 'Aprendizaje y crecimiento',
     accentColor: '#44b4ff',
@@ -50,8 +50,8 @@ export const WHAT_WE_DO_BLOCKS: WhatWeDoBlock[] = [
     borderColor: 'border-[#44b4ff]/25',
     hoverBorderColor: 'hover:border-[#44b4ff]/50',
     bullets: [
-      'Conceptos cloud fundamentales',
-      'Grupos de estudio colaborativos',
+      'Fundamentos de nube',
+      'Temas y conceptos de AWS',
     ],
   },
   {
@@ -60,7 +60,7 @@ export const WHAT_WE_DO_BLOCKS: WhatWeDoBlock[] = [
     badge: 'EJE 02 // PRÁCTICA',
     title: 'Construye',
     description:
-      'Laboratorios guiados en la consola de AWS, entendimiento de arquitecturas reales y retos prácticos para resolver problemas técnicos concretos.',
+      'Actividades prácticas y laboratorios para experimentar con servicios de AWS y resolver problemas técnicos mediante la práctica.',
     iconSrc: '/assets/icons/bolt-icons/bolt-icon-blue.svg',
     iconAlt: 'Construcción y acción',
     accentColor: '#ff9900',
@@ -68,8 +68,8 @@ export const WHAT_WE_DO_BLOCKS: WhatWeDoBlock[] = [
     borderColor: 'border-[#ff9900]/25',
     hoverBorderColor: 'hover:border-[#ff9900]/50',
     bullets: [
-      'Laboratorios guiados en consola',
-      'Retos técnicos y proyectos',
+      'Laboratorios y práctica guiada',
+      'Desarrollo de proyectos',
     ],
   },
   {
@@ -78,7 +78,7 @@ export const WHAT_WE_DO_BLOCKS: WhatWeDoBlock[] = [
     badge: 'EJE 03 // COMUNIDAD',
     title: 'Conecta',
     description:
-      'Networking activo con estudiantes de distintas carreras de la UTP, intercambio técnico entre pares y puentes de conversación con el ecosistema cloud.',
+      'Puntos de encuentro entre estudiantes de diferentes programas para compartir experiencias, resolver dudas y colaborar en tecnología.',
     iconSrc: '/assets/icons/team-icons/team-icon-blue.svg',
     iconAlt: 'Comunidad y networking',
     accentColor: '#03e582',
@@ -86,39 +86,9 @@ export const WHAT_WE_DO_BLOCKS: WhatWeDoBlock[] = [
     borderColor: 'border-[#03e582]/25',
     hoverBorderColor: 'hover:border-[#03e582]/50',
     bullets: [
-      'Equipos interdisciplinarios',
-      'Charlas y experiencias tech',
+      'Intercambio entre estudiantes',
+      'Sesiones y charlas temáticas',
     ],
-  },
-]
-
-// Planned activity formats
-export interface ActivityFormat {
-  badge: string
-  title: string
-  description: string
-}
-
-export const ACTIVITY_FORMATS: ActivityFormat[] = [
-  {
-    badge: 'FORMATO 01',
-    title: 'Hands-on Labs',
-    description: 'Sesiones guiadas paso a paso con servicios de AWS directamente en la consola.',
-  },
-  {
-    badge: 'FORMATO 02',
-    title: 'Tech Talks',
-    description: 'Charlas temáticas sobre arquitectura, desarrollo en la nube y experiencias reales.',
-  },
-  {
-    badge: 'FORMATO 03',
-    title: 'Grupos de Estudio',
-    description: 'Espacios colaborativos entre pares para profundizar temas técnicos a tu ritmo.',
-  },
-  {
-    badge: 'FORMATO 04',
-    title: 'Retos Colaborativos',
-    description: 'Dinámicas en equipo orientadas a resolver problemas prácticos con herramientas cloud.',
   },
 ]
 
@@ -134,37 +104,31 @@ export const FAQ_ITEMS: FaqItem[] = [
     id: 'costo',
     question: '¿Participar en la comunidad tiene algún costo?',
     answer:
-      'No. Formar parte del AWS Student Builder Group UTP, asistir a las reuniones y participar en los talleres es 100% gratuito. Somos una comunidad estudiantil abierta sin costo de inscripción ni membresías.',
+      'Participar en el grupo y asistir a sus actividades no tiene costo. Si decides crear una cuenta personal en AWS para practicar por tu cuenta, el uso de servicios específicos puede generar cobros según los precios de Amazon Web Services.',
   },
   {
     id: 'experiencia',
     question: '¿Necesito experiencia previa con AWS o computación en la nube?',
     answer:
-      'Ninguna. Las actividades están diseñadas para que cualquier estudiante pueda empezar desde cero. Comenzamos explicando los fundamentos de infraestructura y conceptos esenciales antes de pasar a servicios específicos.',
+      'No es obligatoria. La comunidad está abierta a personas con distintos niveles de conocimiento, incluyendo quienes están dando sus primeros pasos en computación en la nube.',
   },
   {
     id: 'carrera',
     question: '¿Tengo que estudiar Ingeniería de Sistemas o Computación?',
     answer:
-      'No. La comunidad está abierta a cualquier estudiante activo de la Universidad Tecnológica de Pereira (UTP), sin importar facultad, carrera o semestre. La tecnología cloud se aplica hoy en múltiples áreas e industrias.',
+      'No. La comunidad está abierta a estudiantes activos de la Universidad Tecnológica de Pereira de cualquier carrera, facultad y semestre.',
   },
   {
     id: 'tarjeta',
     question: '¿Necesito una tarjeta de crédito para aprender AWS?',
     answer:
-      'Para asistir a nuestras charlas, talleres teóricos y sesiones guiadas no necesitas tarjeta de crédito. Para crear una cuenta personal en AWS, la plataforma solicita un método de pago para activar la Capa Gratuita (Free Tier). En la comunidad enseñamos a configurar alertas de presupuesto y límites de gasto para que practiques de forma segura y evites cobros no deseados.',
+      'Para asistir a las charlas o participar en las actividades teóricas de la comunidad no necesitas una cuenta de AWS ni tarjeta de crédito. Para crear una cuenta personal en AWS, la plataforma solicita registrar una tarjeta de crédito o débito válida como método de pago para verificación y facturación de servicios.',
   },
   {
     id: 'eventos',
     question: '¿Dónde puedo consultar los próximos eventos y cómo participo?',
     answer:
-      'Todas nuestras fechas, temarios y convocatorias se publican en nuestro grupo oficial de Meetup. Unirte a Meetup es gratuito y te permite recibir recordatorios automáticos de cada sesión. Además, en el grupo de WhatsApp compartimos anuncios y enlaces directos.',
-  },
-  {
-    id: 'certificaciones',
-    question: '¿El grupo entrega certificaciones oficiales de AWS?',
-    answer:
-      'El grupo no emite certificaciones directamente (los exámenes oficiales son gestionados exclusivamente por Amazon Web Services). Lo que impulsamos son grupos de estudio colaborativos e intercambio de dudas para apoyarnos mutuamente si decides prepararte para certificaciones como AWS Certified Cloud Practitioner.',
+      'Publicamos los encuentros y convocatorias en nuestra página de Meetup. A través de esa plataforma puedes consultar las fechas disponibles y registrar tu asistencia.',
   },
 ]
 
@@ -181,28 +145,28 @@ export const PATH_STEPS: PathStep[] = [
   {
     step: '01',
     label: 'Comunidad',
-    description: 'Únete y conócenos. No necesitas experiencia previa.',
+    description: 'Conoce la comunidad e infórmate sobre las próximas actividades.',
     iconSrc: '/assets/icons/team-icons/team-icon-white.svg',
     iconAlt: 'Comunidad',
   },
   {
     step: '02',
     label: 'Aprende',
-    description: 'Participa en talleres y grupos de estudio a tu ritmo.',
+    description: 'Acércate a los fundamentos de la nube y los servicios de AWS.',
     iconSrc: '/assets/icons/speaker-icons/speaker-icon-white.svg',
     iconAlt: 'Aprendizaje',
   },
   {
     step: '03',
     label: 'Practica',
-    description: 'Experimenta en laboratorios con servicios reales de AWS.',
+    description: 'Aplica los conceptos mediante ejercicios y laboratorios.',
     iconSrc: '/assets/icons/key-icons/key-icon-white.svg',
     iconAlt: 'Práctica',
   },
   {
     step: '04',
     label: 'Construye',
-    description: 'Crea proyectos propios y resuelve retos del mundo real.',
+    description: 'Desarrolla iniciativas propias o colabora con otros estudiantes.',
     iconSrc: '/assets/icons/trophy-icons/trophy-icon-white.svg',
     iconAlt: 'Construcción',
   },

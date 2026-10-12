@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { motion, useInView, useReducedMotion } from 'framer-motion'
 import { SectionTag } from './ui/SectionTag'
-import { WHAT_WE_DO_BLOCKS, ACTIVITY_FORMATS } from '../data/content'
+import { WHAT_WE_DO_BLOCKS } from '../data/content'
 import { EASE_SMOOTH } from '../lib/motion'
 
 export default function WhatWeDo() {
@@ -53,7 +53,7 @@ export default function WhatWeDo() {
             Nuestra dinámica de aprendizaje
           </h2>
           <p className="text-[#9aa3b0] text-base sm:text-lg max-w-2xl leading-relaxed">
-            Tres ejes complementarios diseñados para que pases de la teoría a desplegar soluciones reales en la nube de Amazon Web Services.
+            Tres ejes de actividad para aprender conceptos, practicar con herramientas de AWS y conectar con la comunidad.
           </p>
         </motion.div>
 
@@ -105,65 +105,6 @@ export default function WhatWeDo() {
               </div>
             </motion.article>
           ))}
-        </motion.div>
-
-        {/* Planned activity formats */}
-        <motion.div
-          initial={prefersReducedMotion ? {} : { opacity: 0, y: 16 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.45 }}
-          className="mt-12 pt-10 border-t border-white/8"
-        >
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
-            <div>
-              <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight">
-                Formatos de actividad previstos
-              </h3>
-              <p className="text-xs sm:text-sm text-[#9aa3b0] mt-1">
-                Dinámicas planificadas según la evolución y el interés de los estudiantes en el campus.
-              </p>
-            </div>
-            <span className="text-[11px] font-mono font-bold text-[#44b4ff] bg-[#44b4ff]/10 px-2.5 py-1 rounded border border-[#44b4ff]/20 uppercase self-start sm:self-auto flex-shrink-0">
-              // DINÁMICAS EN DESARROLLO
-            </span>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4" role="list" aria-label="Formatos de actividades">
-            {ACTIVITY_FORMATS.map((fmt) => (
-              <div
-                key={fmt.title}
-                role="listitem"
-                className="p-5 rounded-xl bg-[#1e2736]/60 border border-white/8 flex flex-col justify-between"
-              >
-                <div>
-                  <span className="text-[10px] font-mono font-bold tracking-wider uppercase text-[#44b4ff] block mb-2">
-                    {fmt.badge}
-                  </span>
-                  <h4 className="font-bold text-white text-base mb-1.5">
-                    {fmt.title}
-                  </h4>
-                  <p className="text-[#9aa3b0] text-xs leading-relaxed">
-                    {fmt.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Technical pipeline indicator */}
-        <motion.div
-          initial={prefersReducedMotion ? {} : { opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.5, delay: 0.55 }}
-          className="mt-12 py-4 px-6 rounded-lg bg-[#1e2736]/50 border border-white/8 flex items-center justify-center gap-3 sm:gap-6 flex-wrap font-mono text-xs text-[#8b8e97]"
-          aria-label="Ruta secuencial"
-        >
-          <span className="text-[#44b4ff] font-bold">APRENDE // FUNDAMENTOS</span>
-          <span className="text-white/20 hidden sm:inline" aria-hidden="true">────▶</span>
-          <span className="text-[#ff9900] font-bold">CONSTRUYE // SERVICIOS REALES</span>
-          <span className="text-white/20 hidden sm:inline" aria-hidden="true">────▶</span>
-          <span className="text-[#03e582] font-bold">CONECTA // COMUNIDAD TECH</span>
         </motion.div>
       </div>
     </section>

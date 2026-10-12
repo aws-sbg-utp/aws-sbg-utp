@@ -42,7 +42,7 @@ export default function FinalCTA() {
           </h2>
 
           <p className="text-[#9aa3b0] text-base sm:text-lg mb-10 max-w-lg mx-auto leading-relaxed">
-            El punto de partida para tu camino técnico está en la UTP. Sin requisitos previos ni costos: únete al próximo taller o a la conversación en el chat.
+            Encuentra las próximas sesiones en Meetup o comunícate a través del grupo de WhatsApp.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3.5 justify-center mb-8">
@@ -64,7 +64,7 @@ export default function FinalCTA() {
           </div>
 
           <p className="text-xs font-mono text-[#656871] tracking-wider uppercase">
-            // COMUNIDAD OFICIAL • UNIVERSIDAD TECNOLÓGICA DE PEREIRA
+            // UNIVERSIDAD TECNOLÓGICA DE PEREIRA
           </p>
         </div>
       </div>

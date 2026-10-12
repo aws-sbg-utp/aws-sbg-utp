@@ -15,13 +15,13 @@ export default function Events() {
           {/* Header */}
           <div className="text-center mb-10">
             <div className="mb-4 inline-flex justify-center">
-              <SectionTag label="04 // ACTIVIDADES Y TALLERES" />
+              <SectionTag label="04 // ENCUENTROS Y ACTIVIDADES" />
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight tracking-tight mb-4">
-              Agenda y próximos eventos
+              Próximas actividades
             </h2>
             <p className="text-[#9aa3b0] text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
-              Talleres técnicos, laboratorios en vivo y sesiones de networking en el campus de la UTP.
+              Publicamos las convocatorias y sesiones de la comunidad a través de Meetup.
             </p>
           </div>
 
@@ -30,13 +30,13 @@ export default function Events() {
             {/* Top status bar */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-white/10 gap-3 mb-6">
               <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#03e582] animate-pulse" aria-hidden="true" />
+                <span className="w-2 h-2 rounded-full bg-[#03e582]" aria-hidden="true" />
                 <span className="text-xs font-mono font-bold text-white tracking-wider uppercase">
-                  CONVOCATORIA ACTIVA // MEETUP
+                  CANAL OFICIAL // MEETUP
                 </span>
               </div>
               <span className="text-xs font-mono text-[#8b8e97]">
-                Campus UTP • Pereira, Colombia
+                Comunidad UTP • Pereira, Colombia
               </span>
             </div>
 
@@ -54,25 +54,12 @@ export default function Events() {
                 </div>
                 <div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
-                    Talleres prácticos y grupos de estudio
+                    Actividades en Meetup
                   </h3>
                   <p className="text-[#9aa3b0] text-sm sm:text-base leading-relaxed">
-                    Publicamos cada una de nuestras actividades oficiales en Meetup. Al unirte al grupo recibes recordatorios de fecha, temarios previos y enlace de registro a laboratorios.
+                    Utilizamos Meetup como plataforma para anunciar los próximos encuentros y gestionar la asistencia a cada sesión.
                   </p>
                 </div>
-              </div>
-
-              {/* Format badges */}
-              <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 pt-2">
-                <span className="text-xs font-mono px-3 py-1 rounded bg-white/5 border border-white/10 text-[#c0c8d2]">
-                  ▸ Hands-on Labs
-                </span>
-                <span className="text-xs font-mono px-3 py-1 rounded bg-white/5 border border-white/10 text-[#c0c8d2]">
-                  ▸ Cloud Practitioner Prep
-                </span>
-                <span className="text-xs font-mono px-3 py-1 rounded bg-white/5 border border-white/10 text-[#c0c8d2]">
-                  ▸ Tech Talks
-                </span>
               </div>
 
               {/* Action row */}
@@ -84,10 +71,10 @@ export default function Events() {
                   id="events-cta-meetup"
                   className="w-full sm:w-auto"
                 >
-                  Ver agenda en Meetup
+                  Consultar eventos en Meetup
                 </CtaButton>
                 <p className="text-xs font-mono text-[#8b8e97] text-center sm:text-right">
-                  100% gratuito • Abierto a la comunidad UTP
+                  Abierto a la comunidad estudiantil
                 </p>
               </div>
             </div>

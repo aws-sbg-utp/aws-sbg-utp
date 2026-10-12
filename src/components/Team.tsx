@@ -57,7 +57,7 @@ export default function Team() {
             Equipo que lidera y gestiona
           </h2>
           <p className="text-[#9aa3b0] text-base sm:text-lg max-w-2xl leading-relaxed">
-            Estudiantes de la UTP comprometidos con coordinar actividades, impulsar proyectos y hacer crecer la comunidad cloud.
+            Estudiantes de la UTP que coordinan las actividades, proyectos y encuentros de la comunidad.
           </p>
         </motion.div>
 

@@ -50,8 +50,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-[#9aa3b0] text-sm leading-relaxed max-w-xs mb-1">
-              Comunidad estudiantil de la Universidad Tecnológica de Pereira
-              para aprender, construir y conectar alrededor de AWS y cloud computing.
+              Comunidad de estudiantes de la Universidad Tecnológica de Pereira para aprender y construir en torno a AWS y computación en la nube.
             </p>
 
             {/* Email */}
@@ -124,7 +123,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="text-[#656871] text-xs">
-            © {CURRENT_YEAR} AWS Student Builder Group — UTP. Todos los derechos reservados.
+            © {CURRENT_YEAR} AWS Student Builder Group at UTP. Todos los derechos reservados.
           </p>
           <p className="text-[#4a5568] text-xs">
             Pereira, Colombia

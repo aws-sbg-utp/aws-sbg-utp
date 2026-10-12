@@ -72,8 +72,8 @@ export default function Hero() {
               {...fadeUp(0.32)}
               className="text-[#9aa3b0] text-lg sm:text-xl leading-relaxed mb-8 max-w-xl"
             >
-              Comunidad de estudiantes de la Universidad Tecnológica de Pereira para aprender AWS,
-              trabajar en proyectos cloud y conectar con quienes también están construyendo su camino en tecnología.
+              Comunidad de estudiantes de la Universidad Tecnológica de Pereira para aprender sobre AWS,
+              desarrollar proyectos y conectar con otros entusiastas de la tecnología.
             </motion.p>
 
             {/* CTAs — Meetup primary, WhatsApp secondary */}
@@ -103,7 +103,7 @@ export default function Hero() {
               {...fadeUp(0.48)}
               className="text-[11px] font-mono text-[#656871] tracking-wider uppercase"
             >
-              // RESPALDADO POR AWS STUDENT BUILDER GROUPS • 100% GRATUITO
+              // COMUNIDAD ESTUDIANTIL UTP • PROGRAMA AWS STUDENT BUILDER GROUPS
             </motion.p>
           </div>
 
@@ -136,13 +136,12 @@ export default function Hero() {
                 <div className="pl-3 border-l-2 border-[#44b4ff]/35 text-white/80 space-y-1.5 text-xs">
                   <div><span className="text-[#44b4ff]">community:</span> "AWS Student Builder Group"</div>
                   <div><span className="text-[#44b4ff]">campus:</span> "Univ. Tecnológica de Pereira"</div>
-                  <div><span className="text-[#44b4ff]">focus:</span> ["cloud-labs", "networking", "certs"]</div>
-                  <div><span className="text-[#44b4ff]">cost:</span> "$0.00 / 100% free"</div>
-                  <div><span className="text-[#44b4ff]">prerequisites:</span> "none (from zero)"</div>
+                  <div><span className="text-[#44b4ff]">focus:</span> ["cloud", "projects", "community"]</div>
+                  <div><span className="text-[#44b4ff]">type:</span> "student-community"</div>
                 </div>
                 <div className="pt-2 flex items-center justify-between text-[11px] text-[#8b8e97] border-t border-white/5">
-                  <span className="text-[#03e582]">✔ status: ready-to-build</span>
-                  <span className="text-[#ff9900]">region: sa-east-1</span>
+                  <span className="text-[#03e582]">✔ status: active</span>
+                  <span className="text-[#8b8e97]">pereira / colombia</span>
                 </div>
               </div>
 

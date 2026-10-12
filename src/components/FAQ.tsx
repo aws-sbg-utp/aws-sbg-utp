@@ -33,7 +33,7 @@ export default function FAQ() {
               Preguntas frecuentes
             </h2>
             <p className="text-[#526071] text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
-              Respuestas claras a las dudas más habituales sobre la comunidad, costos, requisitos y cómo participar.
+              Respuestas a dudas habituales sobre la comunidad, requisitos y cómo participar.
             </p>
           </div>
 

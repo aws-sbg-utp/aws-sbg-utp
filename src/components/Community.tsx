@@ -10,9 +10,13 @@ import { EASE_SMOOTH } from '../lib/motion'
 
 function MeetupIcon({ className }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M12.001 2c-5.523 0-10 4.477-10 10 0 5.522 4.477 10 10 10s10-4.478 10-10c0-5.523-4.477-10-10-10zm2.25 14.5c-1.3 0-2.3-.6-3-1.6-.4.9-1.2 1.6-2.5 1.6-1.5 0-2.5-.9-2.5-2.6 0-1.9 1.4-3.4 3.2-3.4.9 0 1.6.4 2 1v-.8c0-.9-.6-1.4-1.5-1.4-.7 0-1.4.3-1.8.8l-.8-.9c.7-.7 1.7-1.1 2.8-1.1 1.7 0 2.8 1 2.8 2.6v3.2c0 .6.4.9.9.9.5 0 .9-.3 1.3-.8l.7.7c-.6.8-1.3 1.2-2.1 1.2zm-2.8-3.4v-.3c-.3-.5-.8-.8-1.4-.8-1 0-1.8.8-1.8 2 0 .9.5 1.4 1.3 1.4.8 0 1.5-.7 1.9-1.8v-.5z" />
-    </svg>
+    <img
+      src="/assets/icons/social/meetup-black.png"
+      alt="Meetup"
+      className={`${className ?? 'w-6 h-6'} object-contain`}
+      width="24"
+      height="24"
+    />
   )
 }
 
@@ -70,19 +74,19 @@ const PRIMARY_CHANNELS: Channel[] = [
   {
     id: 'meetup',
     label: 'Meetup',
-    description: 'Nuestra plataforma oficial para publicar convocatorias, reservar cupos a talleres prácticos y enterarte de las fechas en el campus.',
+    description: 'Consulta las fechas de actividades y confirma tu asistencia.',
     href: SOCIAL_LINKS.meetup,
     icon: <MeetupIcon className="w-6 h-6" />,
-    tag: 'Eventos Oficiales',
-    actionText: 'Ver agenda en Meetup',
+    tag: 'Eventos',
+    actionText: 'Ver actividades en Meetup',
   },
   {
     id: 'whatsapp',
     label: 'WhatsApp',
-    description: 'El espacio activo de conversación diaria donde los estudiantes de la UTP resuelven dudas, coordinan laboratorios y comparten noticias tech.',
+    description: 'Espacio de mensajería para comunicarte con otros integrantes de la comunidad.',
     href: SOCIAL_LINKS.whatsapp,
     icon: <WhatsAppIcon className="w-6 h-6" />,
-    tag: 'Chat de Comunidad',
+    tag: 'Grupo de chat',
     actionText: 'Unirse al grupo',
   },
 ]
@@ -91,25 +95,25 @@ const SECONDARY_CHANNELS: Channel[] = [
   {
     id: 'github',
     label: 'GitHub',
-    description: 'Repositorios de código, plantillas y laboratorios cloud.',
+    description: 'Espacio de la comunidad para proyectos y recursos en código abierto.',
     href: SOCIAL_LINKS.github,
     icon: <GitHubIcon className="w-5 h-5" />,
     tag: 'Código',
-    actionText: 'Explorar repos',
+    actionText: 'Ver GitHub',
   },
   {
     id: 'instagram',
     label: 'Instagram',
-    description: 'Fotografías de sesiones presenciales, avisos y comunidad.',
+    description: 'Novedades, avisos y publicaciones sobre la comunidad.',
     href: SOCIAL_LINKS.instagram,
     icon: <InstagramIcon className="w-5 h-5" />,
     tag: 'Social',
-    actionText: 'Seguir cuenta',
+    actionText: 'Ver perfil',
   },
   {
     id: 'youtube',
     label: 'YouTube',
-    description: 'Grabaciones de charlas pasadas y tutoriales técnicos.',
+    description: 'Canal de vídeos y transmisiones de la comunidad.',
     href: SOCIAL_LINKS.youtube,
     icon: <YouTubeIcon className="w-5 h-5" />,
     tag: 'Video',
@@ -118,11 +122,11 @@ const SECONDARY_CHANNELS: Channel[] = [
   {
     id: 'linkedin',
     label: 'LinkedIn',
-    description: 'Conexión con miembros y novedades de la comunidad.',
+    description: 'Página de la comunidad en LinkedIn para seguir su presencia profesional.',
     href: SOCIAL_LINKS.linkedin,
     icon: <LinkedInIcon className="w-5 h-5" />,
     tag: 'Red Profesional',
-    actionText: 'Conectar',
+    actionText: 'Ver página',
   },
 ]
 
@@ -156,7 +160,7 @@ export default function Community() {
             Conecta con la comunidad
           </h2>
           <p className="text-[#526071] text-base sm:text-lg max-w-xl leading-relaxed">
-            Participa en nuestros canales activos para enterarte de actividades, acceder a código y conectar con otros estudiantes.
+            Canales para consultar actividades, comunicarte con el grupo y seguir nuestras publicaciones.
           </p>
         </motion.div>
 

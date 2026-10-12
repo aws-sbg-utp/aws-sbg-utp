@@ -34,7 +34,7 @@ export default function LearningPath() {
             Nuestro camino
           </h2>
           <p className="text-[#526071] text-base sm:text-lg max-w-xl leading-relaxed">
-            Una ruta progresiva paso a paso para avanzar con confianza, desde el primer taller hasta el despliegue de arquitectura real.
+            Una orientación paso a paso para integrarte a la comunidad y avanzar a tu propio ritmo.
           </p>
         </motion.div>
 
@@ -112,26 +112,6 @@ export default function LearningPath() {
             ))}
           </div>
         </div>
-
-        {/* Blueprint callout note */}
-        <motion.div
-          initial={prefersReducedMotion ? {} : { opacity: 0, y: 16 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.7, ease: EASE_SMOOTH }}
-          className="mt-14 p-5 sm:p-6 rounded-xl bg-[#f0f7fc] border border-[#1a6fa0]/20 flex flex-col sm:flex-row sm:items-center justify-between gap-4"
-        >
-          <div className="flex items-start sm:items-center gap-3">
-            <span className="text-[11px] font-mono font-bold text-[#1a6fa0] bg-[#1a6fa0]/10 px-2.5 py-1 rounded border border-[#1a6fa0]/25 uppercase flex-shrink-0">
-              // ACCESO TOTAL
-            </span>
-            <p className="text-[#161d26] text-sm leading-relaxed font-medium">
-              No necesitas experiencia previa. Si nunca has abierto la consola de AWS, este es el lugar para empezar.
-            </p>
-          </div>
-          <span className="text-xs font-mono text-[#526071] flex-shrink-0">
-            UTP • PEREIRA
-          </span>
-        </motion.div>
       </div>
     </section>
   )
