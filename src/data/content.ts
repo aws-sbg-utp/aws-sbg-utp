@@ -201,30 +201,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     ],
   },
   {
-    id: 'juan-manuel-rojas',
-    name: 'Juan Manuel Rojas Muñoz',
-    role: 'Director of Marketing',
-    photoSrc: '/assets/photos/team/juanmanuel.jpeg',
-    photoAlt: 'Fotografía de Juan Manuel Rojas Muñoz',
-    links: [
-      { label: 'Enlace 1', url: '' },
-      { label: 'Enlace 2', url: '' },
-      { label: 'Enlace 3', url: '' },
-    ],
-  },
-  {
-    id: 'miguel-angel-quintero',
-    name: 'Miguel Ángel Quintero Rodríguez',
-    role: 'General Coordinator',
-    photoSrc: '/assets/photos/team/miguel.jpeg',
-    photoAlt: 'Fotografía de Miguel Ángel Quintero Rodríguez',
-    links: [
-      { label: 'Enlace 1', url: '' },
-      { label: 'Enlace 2', url: '' },
-      { label: 'Enlace 3', url: '' },
-    ],
-  },
-  {
     id: 'isabella-fernandez',
     name: 'Isabella Fernández Colorado',
     role: 'Partnerships & Resources Lead',
@@ -237,11 +213,35 @@ export const TEAM_MEMBERS: TeamMember[] = [
     ],
   },
   {
+    id: 'juan-manuel-rojas',
+    name: 'Juan Manuel Rojas Muñoz',
+    role: 'Director of Marketing',
+    photoSrc: '/assets/photos/team/juanmanuel.jpeg',
+    photoAlt: 'Fotografía de Juan Manuel Rojas Muñoz',
+    links: [
+      { label: 'Enlace 1', url: '' },
+      { label: 'Enlace 2', url: '' },
+      { label: 'Enlace 3', url: '' },
+    ],
+  },
+  {
     id: 'nohora-camila-cardozo',
     name: 'Nohora Camila Cardozo Cardenas',
     role: 'Technical Lead',
     photoSrc: '/assets/photos/team/nohora.jpeg',
     photoAlt: 'Fotografía de Nohora Camila Cardozo Cardenas',
+    links: [
+      { label: 'Enlace 1', url: '' },
+      { label: 'Enlace 2', url: '' },
+      { label: 'Enlace 3', url: '' },
+    ],
+  },
+  {
+    id: 'miguel-angel-quintero',
+    name: 'Miguel Ángel Quintero Rodríguez',
+    role: 'General Coordinator',
+    photoSrc: '/assets/photos/team/miguel.jpeg',
+    photoAlt: 'Fotografía de Miguel Ángel Quintero Rodríguez',
     links: [
       { label: 'Enlace 1', url: '' },
       { label: 'Enlace 2', url: '' },
