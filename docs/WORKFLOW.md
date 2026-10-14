@@ -4,7 +4,16 @@ Este documento define las directrices de desarrollo, ramas, commits y pruebas pa
 
 ---
 
-## 1. Ciclo de Vida de una Tarea
+## 1. Estrategia de Ramas
+
+El repositorio utiliza un modelo de dos ramas principales:
+
+- **`main`**: Rama estable de producción conectada al despliegue continuo en AWS Amplify Hosting. Solo recibe cambios mediante fusiones (`merge`) verificadas desde `dev`.
+- **`dev`**: Rama activa de desarrollo donde se realizan las implementaciones, pruebas y ajustes. Todo nuevo trabajo se inicia y confirma aquí.
+
+---
+
+## 2. Ciclo de Vida de una Tarea
 
 1. **Investigación previa**: Leer el código activo antes de hacer supuestos. Verificar tipos, rutas de archivos y dependencias reales.
 2. **Planificación atómica**: Dividir la tarea en pasos pequeños, reversibles e independientes.
@@ -20,7 +29,7 @@ Este documento define las directrices de desarrollo, ramas, commits y pruebas pa
 
 ---
 
-## 2. Convenciones de Commits (Conventional Commits)
+## 3. Convenciones de Commits (Conventional Commits)
 
 Cada mensaje de commit debe seguir la convención:
 `<tipo>(<ámbito opcional>): <descripción clara en minúsculas y modo imperativo>`
@@ -33,7 +42,7 @@ Cada mensaje de commit debe seguir la convención:
 
 ---
 
-## 3. Criterios de Calidad para Pull Requests y Fusiones
+## 4. Criterios de Calidad para Pull Requests y Fusiones
 
 - [ ] Cero advertencias y errores en `oxlint`.
 - [ ] Cero errores en `tsc -b` bajo modo estricto.
