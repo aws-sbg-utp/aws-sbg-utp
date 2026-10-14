@@ -62,7 +62,7 @@ export default function FinalCTA() {
             </CtaButton>
           </div>
 
-          <p className="text-xs font-mono text-[#9aa3b0] tracking-wider uppercase">
+          <p className="text-xs font-mono text-muted-dark tracking-wider uppercase">
             // UNIVERSIDAD TECNOLÓGICA DE PEREIRA
           </p>
         </div>

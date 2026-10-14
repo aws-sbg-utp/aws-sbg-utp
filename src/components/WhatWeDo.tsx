@@ -24,7 +24,7 @@ export default function WhatWeDo() {
     <section
       ref={ref}
       id="que-hacemos"
-      className="section-padding bg-[#161d26]"
+      className="section-padding bg-navy"
       aria-labelledby="que-hacemos-heading"
     >
       <div className="container-base">
@@ -44,7 +44,7 @@ export default function WhatWeDo() {
           >
             Nuestra dinámica de aprendizaje
           </h2>
-          <p className="text-[#9aa3b0] text-base sm:text-lg max-w-2xl leading-relaxed">
+          <p className="text-muted-dark text-base sm:text-lg max-w-2xl leading-relaxed">
             Tres ejes de actividad para aprender conceptos, practicar con herramientas de AWS y conectar con la comunidad.
           </p>
         </motion.div>
@@ -63,7 +63,7 @@ export default function WhatWeDo() {
               key={block.id}
               variants={cardVariants}
               role="listitem"
-              className={`rounded-xl bg-[#1e2736]/90 border ${block.borderColor} p-6 sm:p-7 relative flex flex-col justify-between group ${block.hoverBorderColor} transition-all duration-300`}
+              className={`rounded-xl bg-navy-card/90 border ${block.borderColor} p-6 sm:p-7 relative flex flex-col justify-between group ${block.hoverBorderColor} transition-all duration-300`}
             >
               <div>
                 <div className="flex items-center justify-between mb-6">
@@ -86,11 +86,11 @@ export default function WhatWeDo() {
                 <h3 className="text-2xl font-bold text-white mb-3">
                   {block.title}
                 </h3>
-                <p className="text-[#9aa3b0] text-sm leading-relaxed mb-6">
+                <p className="text-muted-dark text-sm leading-relaxed mb-6">
                   {block.description}
                 </p>
               </div>
-              <div className="pt-4 border-t border-white/8 text-xs font-mono text-[#8b8e97] space-y-1.5">
+              <div className="pt-4 border-t border-white/8 text-xs font-mono text-text-subtle-dark space-y-1.5">
                 {block.bullets.map((bullet, idx) => (
                   <div key={idx} className="text-white/80">▸ {bullet}</div>
                 ))}

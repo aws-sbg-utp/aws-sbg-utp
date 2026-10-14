@@ -28,7 +28,7 @@ export default function Team() {
     <section
       ref={ref}
       id="equipo"
-      className="section-padding bg-[#161d26]"
+      className="section-padding bg-navy"
       aria-labelledby="equipo-heading"
     >
       <div className="container-base">
@@ -48,7 +48,7 @@ export default function Team() {
           >
             Equipo que lidera y gestiona
           </h2>
-          <p className="text-[#9aa3b0] text-base sm:text-lg max-w-2xl leading-relaxed">
+          <p className="text-muted-dark text-base sm:text-lg max-w-2xl leading-relaxed">
             Estudiantes de la UTP que coordinan las actividades, proyectos y encuentros de la comunidad.
           </p>
         </motion.div>
@@ -67,11 +67,11 @@ export default function Team() {
               key={member.id}
               variants={cardVariants}
               role="listitem"
-              className="rounded-xl bg-[#1e2736]/90 border border-white/10 hover:border-[#44b4ff]/40 transition-all duration-300 p-5 sm:p-6 flex flex-col justify-between group shadow-sm"
+              className="rounded-xl bg-navy-card/90 border border-white/10 hover:border-brand-blue/40 transition-all duration-300 p-5 sm:p-6 flex flex-col justify-between group shadow-sm"
             >
               <div>
                 {/* Photo container with uniform aspect ratio */}
-                <div className="relative aspect-[4/5] rounded-lg overflow-hidden mb-5 bg-[#161d26] border border-white/8">
+                <div className="relative aspect-[4/5] rounded-lg overflow-hidden mb-5 bg-navy border border-white/8">
                   <img
                     src={member.photoSrc}
                     alt={member.photoAlt}
@@ -83,7 +83,7 @@ export default function Team() {
                 </div>
 
                 {/* Role badge */}
-                <span className="text-[11px] font-mono font-bold tracking-wider uppercase text-[#44b4ff] block mb-1.5">
+                <span className="text-[11px] font-mono font-bold tracking-wider uppercase text-brand-blue block mb-1.5">
                   {member.role}
                 </span>
 
@@ -109,7 +109,7 @@ export default function Team() {
                           href={link.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 hover:border-[#44b4ff]/40 hover:text-[#44b4ff] text-white/70 flex items-center justify-center transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#44b4ff]"
+                          className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 hover:border-brand-blue/40 hover:text-brand-blue text-white/70 flex items-center justify-center transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
                           aria-label={`${link.label} de ${member.name}`}
                         >
                           <IconComponent size={14} aria-hidden="true" />

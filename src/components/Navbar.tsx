@@ -52,7 +52,7 @@ export default function Navbar() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-          ? 'bg-[#161d26]/95 backdrop-blur-md border-b border-[#44b4ff]/10 shadow-lg shadow-black/20'
+          ? 'bg-navy/95 backdrop-blur-md border-b border-brand-blue/10 shadow-lg shadow-black/20'
           : 'bg-transparent'
           }`}
         role="banner"
@@ -111,7 +111,7 @@ export default function Navbar() {
 
             {/* Mobile hamburger */}
             <button
-              className="lg:hidden flex items-center justify-center w-10 h-10 text-white rounded-lg border border-white/10 hover:border-[#44b4ff]/40 focus-visible:border-[#44b4ff] transition-colors"
+              className="lg:hidden flex items-center justify-center w-10 h-10 text-white rounded-lg border border-white/10 hover:border-brand-blue/40 focus-visible:border-brand-blue transition-colors"
               onClick={() => setIsOpen(!isOpen)}
               aria-label={isOpen ? 'Cerrar menú' : 'Abrir menú'}
               aria-expanded={isOpen}
@@ -133,7 +133,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, y: -8 }}
             transition={{ duration: 0.2, ease: 'easeOut' }}
-            className="fixed top-16 left-0 right-0 z-40 bg-[#161d26]/98 backdrop-blur-md border-b border-[#44b4ff]/10"
+            className="fixed top-16 left-0 right-0 z-40 bg-navy/98 backdrop-blur-md border-b border-brand-blue/10"
           >
             <div className="container-base py-4">
               <nav className="flex flex-col gap-1" aria-label="Menú móvil">
@@ -141,7 +141,7 @@ export default function Navbar() {
                   <a
                     key={item.href}
                     href={item.href}
-                    className="text-white/80 hover:text-[#44b4ff] hover:bg-white/5 font-medium text-base py-3 px-3 rounded-md transition-colors"
+                    className="text-white/80 hover:text-brand-blue hover:bg-white/5 font-medium text-base py-3 px-3 rounded-md transition-colors"
                     onClick={(e) => handleNavClick(e, item.href)}
                   >
                     {item.label}
