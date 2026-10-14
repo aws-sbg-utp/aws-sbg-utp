@@ -31,7 +31,7 @@ const FOOTER_LINKS = [
 export default function Footer() {
   return (
     <footer
-      className="bg-[#161d26] border-t-2 border-[#44b4ff]/20"
+      className="bg-navy border-t-2 border-brand-blue/20"
       role="contentinfo"
       aria-label="Pie de página"
     >
@@ -47,16 +47,17 @@ export default function Footer() {
                 className="h-10 w-10"
                 width="40"
                 height="40"
+                decoding="async"
               />
             </div>
-            <p className="text-[#9aa3b0] text-sm leading-relaxed max-w-xs mb-1">
+            <p className="text-muted-dark text-sm leading-relaxed max-w-xs mb-1">
               Comunidad de estudiantes de la Universidad Tecnológica de Pereira para aprender y construir en torno a AWS y computación en la nube.
             </p>
 
             {/* Email */}
             <a
               href={`mailto:${SOCIAL_LINKS.email}`}
-              className="inline-flex items-center gap-2 mt-4 text-[#9aa3b0] hover:text-[#44b4ff] focus-visible:text-[#44b4ff] text-sm transition-colors"
+              className="inline-flex items-center gap-2 mt-4 text-muted-dark hover:text-brand-blue focus-visible:text-brand-blue text-sm transition-colors"
               aria-label={`Enviar correo a ${SOCIAL_LINKS.email}`}
             >
               <Mail size={14} aria-hidden="true" />
@@ -71,6 +72,7 @@ export default function Footer() {
                 className="h-4 w-auto opacity-20"
                 width="27"
                 height="16"
+                decoding="async"
               />
             </div>
           </div>
@@ -86,7 +88,7 @@ export default function Footer() {
                   <li key={link.href}>
                     <a
                       href={link.href}
-                      className="text-[#9aa3b0] hover:text-[#44b4ff] focus-visible:text-[#44b4ff] text-sm transition-colors"
+                      className="text-muted-dark hover:text-brand-blue focus-visible:text-brand-blue text-sm transition-colors"
                     >
                       {link.label}
                     </a>
@@ -108,7 +110,7 @@ export default function Footer() {
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 text-[#9aa3b0] hover:text-[#44b4ff] focus-visible:text-[#44b4ff] text-sm transition-colors"
+                    className="flex items-center gap-1.5 text-muted-dark hover:text-brand-blue focus-visible:text-brand-blue text-sm transition-colors"
                     aria-label={item.ariaLabel}
                   >
                     {item.label}
@@ -122,10 +124,10 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p className="text-[#9aa3b0] text-xs">
+          <p className="text-muted-dark text-xs">
             © {CURRENT_YEAR} AWS Student Builder Group at UTP. Todos los derechos reservados.
           </p>
-          <p className="text-[#9aa3b0] text-xs">
+          <p className="text-muted-dark text-xs">
             Pereira, Colombia
           </p>
         </div>

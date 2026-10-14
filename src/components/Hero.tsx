@@ -19,7 +19,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-[#161d26]"
+      className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-navy"
       aria-label="Sección principal"
     >
       {/* Dot grid background */}
@@ -30,19 +30,19 @@ export default function Hero() {
 
       {/* Top accent line */}
       <div
-        className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#44b4ff]/40 to-transparent pointer-events-none"
+        className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-blue/40 to-transparent pointer-events-none"
         aria-hidden="true"
       />
 
       {/* Subtle blue glow */}
       <div
-        className="absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-[#44b4ff]/5 blur-[120px] pointer-events-none"
+        className="absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-brand-blue/5 blur-[120px] pointer-events-none"
         aria-hidden="true"
       />
 
       {/* Subtle orange accent — AWS identity */}
       <div
-        className="absolute -bottom-24 -right-16 w-[380px] h-[380px] rounded-full bg-[#ff9900]/4 blur-[100px] pointer-events-none"
+        className="absolute -bottom-24 -right-16 w-[380px] h-[380px] rounded-full bg-brand-orange/4 blur-[100px] pointer-events-none"
         aria-hidden="true"
       />
 
@@ -70,7 +70,7 @@ export default function Hero() {
             {/* Subtext */}
             <motion.p
               {...fadeUp(0.32)}
-              className="text-[#9aa3b0] text-lg sm:text-xl leading-relaxed mb-8 max-w-xl"
+              className="text-muted-dark text-lg sm:text-xl leading-relaxed mb-8 max-w-xl"
             >
               Comunidad de estudiantes de la Universidad Tecnológica de Pereira para aprender sobre AWS,
               desarrollar proyectos y conectar con otros entusiastas de la tecnología.
@@ -101,7 +101,7 @@ export default function Hero() {
             {/* Technical footnote */}
             <motion.p
               {...fadeUp(0.48)}
-              className="text-[11px] font-mono text-[#9aa3b0] tracking-wider uppercase"
+              className="text-[11px] font-mono text-muted-dark tracking-wider uppercase"
             >
               // COMUNIDAD ESTUDIANTIL UTP • PROGRAMA AWS STUDENT BUILDER GROUPS
             </motion.p>
@@ -111,7 +111,7 @@ export default function Hero() {
           <div className="lg:col-span-5">
             <motion.div
               {...fadeUp(0.35)}
-              className="relative rounded-xl bg-[#1e2736]/95 border border-[#44b4ff]/20 shadow-2xl p-5 sm:p-6 font-mono text-xs sm:text-sm overflow-hidden"
+              className="relative rounded-xl bg-navy-card/95 border border-brand-blue/20 shadow-2xl p-5 sm:p-6 font-mono text-xs sm:text-sm overflow-hidden"
             >
               {/* Terminal top bar */}
               <div className="flex items-center justify-between pb-3.5 border-b border-white/10 mb-4">
@@ -121,8 +121,8 @@ export default function Hero() {
                   <div className="w-2.5 h-2.5 rounded-full bg-[#27c93f]/80" />
                   <span className="text-white/40 text-[11px] ml-2 tracking-wider">aws-sbg-utp ~ bash</span>
                 </div>
-                <div className="flex items-center gap-1.5 text-[10px] text-[#44b4ff] bg-[#44b4ff]/10 px-2 py-0.5 rounded border border-[#44b4ff]/25 font-semibold">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#03e582]" />
+                <div className="flex items-center gap-1.5 text-[10px] text-brand-blue bg-brand-blue/10 px-2 py-0.5 rounded border border-brand-blue/25 font-semibold">
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-green" />
                   ACTIVE
                 </div>
               </div>
@@ -130,18 +130,18 @@ export default function Hero() {
               {/* Terminal body */}
               <div className="space-y-3 leading-relaxed text-[#c0c8d2]">
                 <div className="flex items-center gap-2 text-white/95">
-                  <span className="text-[#44b4ff] font-bold">$</span>
+                  <span className="text-brand-blue font-bold">$</span>
                   <span>aws-sbg info --campus utp</span>
                 </div>
-                <div className="pl-3 border-l-2 border-[#44b4ff]/35 text-white/80 space-y-1.5 text-xs">
-                  <div><span className="text-[#44b4ff]">community:</span> "AWS Student Builder Group"</div>
-                  <div><span className="text-[#44b4ff]">campus:</span> "Univ. Tecnológica de Pereira"</div>
-                  <div><span className="text-[#44b4ff]">focus:</span> ["cloud", "projects", "community"]</div>
-                  <div><span className="text-[#44b4ff]">type:</span> "student-community"</div>
+                <div className="pl-3 border-l-2 border-brand-blue/35 text-white/80 space-y-1.5 text-xs">
+                  <div><span className="text-brand-blue">community:</span> "AWS Student Builder Group"</div>
+                  <div><span className="text-brand-blue">campus:</span> "Univ. Tecnológica de Pereira"</div>
+                  <div><span className="text-brand-blue">focus:</span> ["cloud", "projects", "community"]</div>
+                  <div><span className="text-brand-blue">type:</span> "student-community"</div>
                 </div>
-                <div className="pt-2 flex items-center justify-between text-[11px] text-[#8b8e97] border-t border-white/5">
-                  <span className="text-[#03e582]">✔ status: active</span>
-                  <span className="text-[#8b8e97]">pereira / colombia</span>
+                <div className="pt-2 flex items-center justify-between text-[11px] text-text-subtle-dark border-t border-white/5">
+                  <span className="text-brand-green">✔ status: active</span>
+                  <span className="text-text-subtle-dark">pereira / colombia</span>
                 </div>
               </div>
 
@@ -153,6 +153,7 @@ export default function Hero() {
                   className="w-32 h-32"
                   width="128"
                   height="128"
+                  decoding="async"
                 />
               </div>
             </motion.div>
@@ -171,6 +172,7 @@ export default function Hero() {
             className="w-6 h-6 opacity-60"
             width="24"
             height="24"
+            decoding="async"
           />
           <img
             src="/assets/icons/bolt-icons/bolt-icon-blue.svg"
@@ -178,6 +180,7 @@ export default function Hero() {
             className="w-6 h-6 opacity-60"
             width="24"
             height="24"
+            decoding="async"
           />
           <img
             src="/assets/icons/team-icons/team-icon-blue.svg"
@@ -185,6 +188,7 @@ export default function Hero() {
             className="w-6 h-6 opacity-60"
             width="24"
             height="24"
+            decoding="async"
           />
           <img
             src="/assets/icons/speaker-icons/speaker-icon-amber.svg"
@@ -192,14 +196,16 @@ export default function Hero() {
             className="w-6 h-6 opacity-60"
             width="24"
             height="24"
+            decoding="async"
           />
-          <div className="flex-1 h-px bg-gradient-to-r from-[#44b4ff]/20 to-transparent" />
+          <div className="flex-1 h-px bg-gradient-to-r from-brand-blue/20 to-transparent" />
           <img
             src="/assets/branding/aws-logo-white.svg"
             alt=""
             className="h-4 w-auto opacity-35"
             width="27"
             height="16"
+            decoding="async"
           />
         </motion.div>
       </div>
@@ -210,7 +216,7 @@ export default function Hero() {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2, duration: 0.5 }}
         onClick={handleScrollDown}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-1.5 text-white/30 hover:text-[#44b4ff] focus-visible:text-[#44b4ff] transition-colors cursor-pointer border-0 bg-transparent"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-1.5 text-white/30 hover:text-brand-blue focus-visible:text-brand-blue transition-colors cursor-pointer border-0 bg-transparent"
         aria-label="Ir a la siguiente sección"
       >
         <span className="text-[10px] font-semibold tracking-[0.15em] uppercase font-mono" aria-hidden="true">scroll</span>

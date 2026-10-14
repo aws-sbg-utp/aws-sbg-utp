@@ -16,7 +16,7 @@ export function SectionTag({
   className = '',
 }: SectionTagProps) {
   const baseClass = variant === 'dark' ? 'tag-mono' : 'tag-mono-dark'
-  const dotColor = variant === 'dark' ? 'bg-[#44b4ff]' : 'bg-[#1a6fa0]'
+  const dotColor = variant === 'dark' ? 'bg-brand-blue' : 'bg-brand-blue-dark'
   const content = label ?? children
 
   return (

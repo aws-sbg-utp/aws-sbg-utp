@@ -6,10 +6,9 @@ import { CtaButton } from './ui/CtaButton'
 
 export default function FinalCTA() {
   return (
-    // bg-[#0f1520] — slightly darker than navbar sections for clear separation from footer
     <AnimatedSection
       id="unete"
-      className="section-padding bg-[#0f1520] relative overflow-hidden"
+      className="section-padding bg-navy-darker relative overflow-hidden"
     >
       {/* Background dot grid */}
       <div
@@ -18,13 +17,13 @@ export default function FinalCTA() {
       />
       {/* Top accent — clear visual boundary from Community (white) */}
       <div
-        className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#44b4ff]/40 to-transparent pointer-events-none"
+        className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-blue/40 to-transparent pointer-events-none"
         aria-hidden="true"
       />
 
       {/* Subtle centered glow */}
       <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[250px] rounded-full bg-[#44b4ff]/6 blur-[90px] pointer-events-none"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[250px] rounded-full bg-brand-blue/6 blur-[90px] pointer-events-none"
         aria-hidden="true"
       />
 
@@ -41,7 +40,7 @@ export default function FinalCTA() {
             <span className="text-gradient-blue">a construir en la nube?</span>
           </h2>
 
-          <p className="text-[#9aa3b0] text-base sm:text-lg mb-10 max-w-lg mx-auto leading-relaxed">
+          <p className="text-muted-dark text-base sm:text-lg mb-10 max-w-lg mx-auto leading-relaxed">
             Encuentra las próximas sesiones en Meetup o comunícate a través del grupo de WhatsApp.
           </p>
 

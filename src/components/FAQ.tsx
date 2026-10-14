@@ -28,11 +28,11 @@ export default function FAQ() {
             </div>
             <h2
               id="faq-heading"
-              className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#161d26] leading-tight tracking-tight mb-4"
+              className="text-3xl sm:text-4xl lg:text-5xl font-black text-navy leading-tight tracking-tight mb-4"
             >
               Preguntas frecuentes
             </h2>
-            <p className="text-[#526071] text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
+            <p className="text-muted-light text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
               Respuestas a dudas habituales sobre la comunidad, requisitos y cómo participar.
             </p>
           </div>
@@ -47,8 +47,8 @@ export default function FAQ() {
               return (
                 <div
                   key={item.id}
-                  className={`rounded-xl bg-[#f8fafc] border transition-all duration-200 overflow-hidden ${
-                    isOpen ? 'border-[#1a6fa0] shadow-sm' : 'border-[#161d26]/10 hover:border-[#1a6fa0]/40'
+                  className={`rounded-xl bg-surface-subtle border transition-all duration-200 overflow-hidden ${
+                    isOpen ? 'border-brand-blue-dark shadow-sm' : 'border-navy/10 hover:border-brand-blue-dark/40'
                   }`}
                 >
                   <h3>
@@ -58,12 +58,12 @@ export default function FAQ() {
                       aria-expanded={isOpen}
                       aria-controls={panelId}
                       onClick={() => toggleItem(item.id)}
-                      className="w-full text-left py-5 px-6 flex items-center justify-between gap-4 font-bold text-[#161d26] text-base sm:text-lg hover:text-[#1a6fa0] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1a6fa0] transition-colors cursor-pointer"
+                      className="w-full text-left py-5 px-6 flex items-center justify-between gap-4 font-bold text-navy text-base sm:text-lg hover:text-brand-blue-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue-dark transition-colors cursor-pointer"
                     >
                       <span>{item.question}</span>
                       <ChevronDown
                         size={20}
-                        className={`text-[#1a6fa0] transition-transform duration-200 flex-shrink-0 ${
+                        className={`text-brand-blue-dark transition-transform duration-200 flex-shrink-0 ${
                           isOpen ? 'rotate-180' : ''
                         }`}
                         aria-hidden="true"
@@ -83,7 +83,7 @@ export default function FAQ() {
                         transition={{ duration: 0.25, ease: EASE_SMOOTH }}
                         className="overflow-hidden"
                       >
-                        <div className="px-6 pb-6 pt-1 text-[#526071] text-sm sm:text-base leading-relaxed border-t border-[#161d26]/8">
+                        <div className="px-6 pb-6 pt-1 text-muted-light text-sm sm:text-base leading-relaxed border-t border-navy/8">
                           {item.answer}
                         </div>
                       </motion.div>
