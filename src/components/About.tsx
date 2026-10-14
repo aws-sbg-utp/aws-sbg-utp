@@ -16,7 +16,7 @@ export default function About() {
               <SectionTag label="01 // SOBRE NOSOTROS" variant="light" />
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-navy leading-[1.1] tracking-tight mb-8">
-              ¿Qué es el AWS<br />Student Builder Group?
+              ¿Qué es el AWS Student Builder Group?
             </h2>
 
             {/* Official UTP + SBG institutional seal */}

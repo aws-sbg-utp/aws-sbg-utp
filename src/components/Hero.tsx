@@ -58,12 +58,10 @@ export default function Hero() {
             {/* Main heading */}
             <motion.h1
               {...fadeUp(0.22)}
-              className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.08] tracking-tight mb-6"
+              className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.08] tracking-tight mb-6 max-w-lg"
             >
-              Aprende cloud
-              <br />
-              <span className="text-gradient-blue">construyendo</span>
-              <br />
+              Aprende cloud{' '}
+              <span className="text-gradient-blue inline-block">construyendo</span>{' '}
               cosas reales.
             </motion.h1>
 
