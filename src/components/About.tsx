@@ -22,7 +22,7 @@ export default function About() {
             {/* Official UTP + SBG institutional seal */}
             <div className="p-4 rounded-xl bg-surface-subtle border border-navy/8 inline-flex items-center gap-4 max-w-md">
               <img
-                src="/assets/branding/sbg-logo-utp.jpeg"
+                src="/assets/branding/sbg-logo-utp.webp"
                 alt="Logo AWS Student Builder Group UTP"
                 className="w-16 h-16 rounded-lg object-cover border border-navy/10 shadow-sm flex-shrink-0"
                 width="64"
