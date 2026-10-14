@@ -2,22 +2,14 @@ import { useRef } from 'react'
 import { motion, useInView, useReducedMotion } from 'framer-motion'
 import { SectionTag } from './ui/SectionTag'
 import { WHAT_WE_DO_BLOCKS } from '../data/content'
-import { EASE_SMOOTH } from '../lib/motion'
+import { EASE_SMOOTH, createStaggerContainer } from '../lib/motion'
 
 export default function WhatWeDo() {
   const ref = useRef<HTMLElement>(null)
   const isInView = useInView(ref, { once: true, margin: '-80px 0px' })
   const prefersReducedMotion = useReducedMotion()
 
-  const staggerVariants = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: prefersReducedMotion ? 0 : 0.12,
-        delayChildren: prefersReducedMotion ? 0 : 0.1,
-      },
-    },
-  }
+  const staggerVariants = createStaggerContainer(0.12, 0.1, prefersReducedMotion)
 
   const cardVariants = {
     hidden: prefersReducedMotion ? {} : { opacity: 0, y: 28 },

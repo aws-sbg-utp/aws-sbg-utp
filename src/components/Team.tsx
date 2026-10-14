@@ -3,22 +3,14 @@ import { motion, useInView, useReducedMotion } from 'framer-motion'
 import { Globe, Link as LinkIcon, Share2 } from 'lucide-react'
 import { SectionTag } from './ui/SectionTag'
 import { TEAM_MEMBERS } from '../data/content'
-import { EASE_SMOOTH } from '../lib/motion'
+import { EASE_SMOOTH, createStaggerContainer } from '../lib/motion'
 
 export default function Team() {
   const ref = useRef<HTMLElement>(null)
   const isInView = useInView(ref, { once: true, margin: '-80px 0px' })
   const prefersReducedMotion = useReducedMotion()
 
-  const staggerVariants = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: prefersReducedMotion ? 0 : 0.1,
-        delayChildren: prefersReducedMotion ? 0 : 0.1,
-      },
-    },
-  }
+  const staggerVariants = createStaggerContainer(0.1, 0.1, prefersReducedMotion)
 
   const cardVariants = {
     hidden: prefersReducedMotion ? {} : { opacity: 0, y: 24 },
