@@ -165,80 +165,80 @@ export default function Community() {
         </motion.div>
 
         {/* Tier 1: Primary Featured Channels (Meetup & WhatsApp) */}
-        <div className="grid md:grid-cols-2 gap-6 mb-8" role="list" aria-label="Canales principales">
+        <ul className="grid md:grid-cols-2 gap-6 mb-8 list-none p-0 m-0" aria-label="Canales principales">
           {PRIMARY_CHANNELS.map((channel) => (
-            <motion.a
-              key={channel.id}
-              href={channel.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              role="listitem"
-              id={`channel-${channel.id}`}
-              className="p-7 sm:p-8 rounded-2xl bg-[#f8fafc] border-2 border-[#161d26]/10 hover:border-[#1a6fa0] transition-all duration-300 flex flex-col justify-between group no-underline shadow-sm"
-              aria-label={`${channel.label} — ${channel.description}`}
-            >
-              <div>
-                <div className="flex items-center justify-between mb-5">
-                  <div className="w-12 h-12 rounded-xl bg-white border border-[#161d26]/10 flex items-center justify-center text-[#161d26] group-hover:text-[#1a6fa0] transition-colors duration-200 shadow-sm">
-                    {channel.icon}
+            <li key={channel.id} className="flex">
+              <motion.a
+                href={channel.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                id={`channel-${channel.id}`}
+                className="w-full p-7 sm:p-8 rounded-2xl bg-[#f8fafc] border-2 border-[#161d26]/10 hover:border-[#1a6fa0] transition-all duration-300 flex flex-col justify-between group no-underline shadow-sm"
+                aria-label={`${channel.label} — ${channel.description}`}
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-5">
+                    <div className="w-12 h-12 rounded-xl bg-white border border-[#161d26]/10 flex items-center justify-center text-[#161d26] group-hover:text-[#1a6fa0] transition-colors duration-200 shadow-sm">
+                      {channel.icon}
+                    </div>
+                    <span className="text-[11px] font-mono font-bold tracking-wider uppercase text-[#1a6fa0] bg-[#1a6fa0]/10 px-2.5 py-1 rounded border border-[#1a6fa0]/20">
+                      {channel.tag}
+                    </span>
                   </div>
-                  <span className="text-[11px] font-mono font-bold tracking-wider uppercase text-[#1a6fa0] bg-[#1a6fa0]/10 px-2.5 py-1 rounded border border-[#1a6fa0]/20">
-                    {channel.tag}
-                  </span>
+                  <h3 className="text-2xl font-bold text-[#161d26] mb-2.5 group-hover:text-[#1a6fa0] transition-colors">
+                    {channel.label}
+                  </h3>
+                  <p className="text-[#526071] text-sm sm:text-base leading-relaxed mb-6">
+                    {channel.description}
+                  </p>
                 </div>
-                <h3 className="text-2xl font-bold text-[#161d26] mb-2.5 group-hover:text-[#1a6fa0] transition-colors">
-                  {channel.label}
-                </h3>
-                <p className="text-[#526071] text-sm sm:text-base leading-relaxed mb-6">
-                  {channel.description}
-                </p>
-              </div>
 
-              <div className="pt-4 border-t border-[#161d26]/8 flex items-center justify-between text-sm font-semibold text-[#1a6fa0]">
-                <span>{channel.actionText}</span>
-                <ArrowUpRight size={18} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" aria-hidden="true" />
-              </div>
-            </motion.a>
+                <div className="pt-4 border-t border-[#161d26]/8 flex items-center justify-between text-sm font-semibold text-[#1a6fa0]">
+                  <span>{channel.actionText}</span>
+                  <ArrowUpRight size={18} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" aria-hidden="true" />
+                </div>
+              </motion.a>
+            </li>
           ))}
-        </div>
+        </ul>
 
         {/* Tier 2: Secondary Resource Platforms */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4" role="list" aria-label="Plataformas de recursos">
+        <ul className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 list-none p-0 m-0" aria-label="Plataformas de recursos">
           {SECONDARY_CHANNELS.map((channel) => (
-            <motion.a
-              key={channel.id}
-              href={channel.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              role="listitem"
-              id={`channel-${channel.id}`}
-              className="p-5 rounded-xl bg-white border border-[#161d26]/10 hover:border-[#1a6fa0]/50 transition-all duration-200 flex flex-col justify-between group no-underline"
-              aria-label={`${channel.label} — ${channel.description}`}
-            >
-              <div>
-                <div className="flex items-center justify-between mb-3.5">
-                  <span className="text-[#526071] group-hover:text-[#1a6fa0] group-focus-visible:text-[#1a6fa0] transition-colors duration-200">
-                    {channel.icon}
-                  </span>
-                  <span className="text-[10px] font-mono font-bold tracking-wider uppercase text-[#526071]">
-                    {channel.tag}
-                  </span>
+            <li key={channel.id} className="flex">
+              <motion.a
+                href={channel.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                id={`channel-${channel.id}`}
+                className="w-full p-5 rounded-xl bg-white border border-[#161d26]/10 hover:border-[#1a6fa0]/50 transition-all duration-200 flex flex-col justify-between group no-underline"
+                aria-label={`${channel.label} — ${channel.description}`}
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-3.5">
+                    <span className="text-[#526071] group-hover:text-[#1a6fa0] group-focus-visible:text-[#1a6fa0] transition-colors duration-200">
+                      {channel.icon}
+                    </span>
+                    <span className="text-[10px] font-mono font-bold tracking-wider uppercase text-[#526071]">
+                      {channel.tag}
+                    </span>
+                  </div>
+                  <h4 className="font-bold text-[#161d26] text-base mb-1.5 group-hover:text-[#1a6fa0] transition-colors">
+                    {channel.label}
+                  </h4>
+                  <p className="text-[#526071] text-xs leading-relaxed mb-4">
+                    {channel.description}
+                  </p>
                 </div>
-                <h4 className="font-bold text-[#161d26] text-base mb-1.5 group-hover:text-[#1a6fa0] transition-colors">
-                  {channel.label}
-                </h4>
-                <p className="text-[#526071] text-xs leading-relaxed mb-4">
-                  {channel.description}
-                </p>
-              </div>
 
-              <div className="flex items-center justify-between pt-3 border-t border-[#161d26]/6 text-xs font-mono font-semibold text-[#1a6fa0]">
-                <span>{channel.actionText}</span>
-                <ArrowUpRight size={13} aria-hidden="true" />
-              </div>
-            </motion.a>
+                <div className="flex items-center justify-between pt-3 border-t border-[#161d26]/6 text-xs font-mono font-semibold text-[#1a6fa0]">
+                  <span>{channel.actionText}</span>
+                  <ArrowUpRight size={13} aria-hidden="true" />
+                </div>
+              </motion.a>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   )

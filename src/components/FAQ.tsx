@@ -38,7 +38,7 @@ export default function FAQ() {
           </div>
 
           {/* Accordion list */}
-          <div className="space-y-4" role="region" aria-label="Acordeón de preguntas frecuentes">
+          <div className="space-y-4">
             {FAQ_ITEMS.map((item) => {
               const isOpen = openId === item.id
               const btnId = `faq-btn-${item.id}`

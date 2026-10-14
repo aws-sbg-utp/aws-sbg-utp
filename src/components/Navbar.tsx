@@ -23,11 +23,25 @@ export default function Navbar() {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
+  useEffect(() => {
+    if (!isOpen) return
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setIsOpen(false)
+        const toggleBtn = document.getElementById('mobile-menu-button')
+        toggleBtn?.focus()
+      }
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [isOpen])
+
   const closeMenu = () => setIsOpen(false)
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault()
     closeMenu()
+    window.history.pushState(null, '', href)
     const target = document.querySelector(href)
     if (target) {
       target.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth' })
@@ -55,6 +69,7 @@ export default function Navbar() {
               aria-label="AWS Student Builder Group UTP — inicio"
               onClick={(e) => {
                 e.preventDefault()
+                window.history.pushState(null, '', window.location.pathname)
                 window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' })
               }}
             >
@@ -114,9 +129,6 @@ export default function Navbar() {
         {isOpen && (
           <motion.div
             id="mobile-menu"
-            role="dialog"
-            aria-label="Menú de navegación"
-            aria-modal="true"
             initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, y: -8 }}
