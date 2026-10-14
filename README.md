@@ -20,18 +20,23 @@ npm run dev
 
 El servidor corre por defecto en `http://localhost:5173`.
 
-## Build de producción
+## Scripts disponibles
 
 ```bash
-npm run build
-```
+# Servidor de desarrollo (http://localhost:5173)
+npm run dev
 
-Genera el bundle estático optimizado en la carpeta `dist/`.
+# Verificación de tipos estricta con TypeScript
+npm run typecheck
 
-## Linting
-
-```bash
+# Linter rápido con Oxlint
 npm run lint
+
+# Compilación de producción (genera dist/)
+npm run build
+
+# Previsualización local del build
+npm run preview
 ```
 
 ## Estructura del proyecto
@@ -77,6 +82,15 @@ public/
     └── photos/
         └── team/         # Fotografías de los integrantes del equipo
 ```
+
+## Documentación del proyecto
+
+Para profundizar en la arquitectura, sistema de diseño y directrices de desarrollo, consulta la documentación modular:
+
+- [docs/PROJECT.md](docs/PROJECT.md) — Misión comunitaria, alcance del proyecto y canales oficiales.
+- [docs/DESIGN.md](docs/DESIGN.md) — Sistema de diseño, tokens Tailwind CSS v4, accesibilidad (WCAG 2.2 AA) y pautas visuales.
+- [docs/WORKFLOW.md](docs/WORKFLOW.md) — Flujo de trabajo, convenciones de commits semánticos y protocolo de verificación.
+- [AGENTS.md](AGENTS.md) — Directrices operativas y reglas inmutables para agentes de IA.
 
 ## Despliegue en AWS Amplify Hosting
 
