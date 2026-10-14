@@ -1,37 +1,32 @@
 @import "tailwindcss";
 
 @theme {
-  --color-aws-blue: #44b4ff;
-  --color-aws-blue-dark: #2a9de0;
-  --color-aws-blue-light: #7fcfff;
-  --color-navy: #161d26;
-  --color-navy-light: #1e2736;
-  --color-navy-lighter: #243044;
-  --color-aws-orange: #ff9900;
-  --color-green: #03e582;
-  --color-purple: #ad5cff;
-  --color-pink: #ff57ea;
-  --color-gray: #656871;
-  --color-gray-light: #8b8e97;
-
-  /* Semantic Surface Tokens */
-  --color-surface-dark: #161d26;
-  --color-surface-card-dark: #1e2736;
-  --color-surface-card-lighter: #243044;
-  --color-surface-light: #ffffff;
-  --color-surface-subtle-light: #f8fafc;
-
-  /* Semantic Brand & Accent Tokens */
+  /* Identidad de marca */
   --color-brand-blue: #44b4ff;
+  --color-brand-blue-hover: #7fcfff;
   --color-brand-blue-dark: #1a6fa0;
   --color-brand-orange: #ff9900;
   --color-brand-green: #03e582;
 
-  /* Semantic Text Tokens */
-  --color-text-muted-dark: #9aa3b0;
-  --color-text-subtle-dark: #656871;
-  --color-text-muted-light: #526071;
+  /* Superficies */
+  --color-navy: #161d26;
+  --color-navy-card: #1e2736;
+  --color-navy-card-light: #243044;
+  --color-navy-darker: #0f1520;
+  --color-surface-subtle: #f8fafc;
 
+  /* Textos */
+  --color-text-muted-dark: #9aa3b0;
+  --color-text-subtle-dark: #8b8e97;
+  --color-text-muted-light: #526071;
+  --color-muted-dark: #9aa3b0;
+  --color-muted-light: #526071;
+
+  /* Aliases de compatibilidad */
+  --color-aws-blue: #44b4ff;
+  --color-aws-orange: #ff9900;
+
+  /* Tipografía y cinemática */
   --font-sans: "Inter", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", "Fira Code", monospace;
 
@@ -184,32 +179,6 @@
     transform: translateY(0);
   }
 
-  /* ─── Section labels ──────────────────────────────────────── */
-
-  /* On dark backgrounds — blue label text */
-  .section-label {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #44b4ff;
-  }
-
-  /* On light/white backgrounds — navy label text (adequate contrast: > 5.5:1) */
-  .section-label-dark {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #1a6fa0;
-  }
-
   /* ─── Technical Monospace Badges ──────────────────────────── */
 
   .tag-mono {
@@ -242,44 +211,6 @@
     border-radius: 4px;
     background-color: #f0f7fc;
     border: 1px solid rgba(26, 111, 160, 0.2);
-  }
-
-  /* ─── Cards ───────────────────────────────────────────────── */
-
-  .card-dark {
-    background-color: #1e2736;
-    border: 1px solid rgba(68, 180, 255, 0.12);
-    border-radius: 8px;
-    padding: 2rem;
-    transition: border-color 0.2s var(--ease-smooth), box-shadow 0.2s var(--ease-smooth);
-  }
-
-  .card-dark:hover {
-    border-color: rgba(68, 180, 255, 0.35);
-    box-shadow: 0 4px 24px rgba(68, 180, 255, 0.08);
-  }
-
-  .card-light {
-    background-color: #ffffff;
-    border: 1px solid rgba(22, 29, 38, 0.08);
-    border-radius: 8px;
-    padding: 1.5rem;
-    transition: border-color 0.2s var(--ease-smooth),
-                box-shadow 0.2s var(--ease-smooth),
-                transform 0.2s var(--ease-smooth);
-  }
-
-  .card-light:hover {
-    border-color: rgba(68, 180, 255, 0.35);
-    box-shadow: 0 4px 20px rgba(68, 180, 255, 0.08);
-    transform: translateY(-1px);
-  }
-
-  .card-light:focus-visible {
-    outline: 2px solid #44b4ff;
-    outline-offset: 2px;
-    border-color: rgba(68, 180, 255, 0.5);
-    box-shadow: 0 4px 20px rgba(68, 180, 255, 0.1);
   }
 
   /* ─── Dot grid ────────────────────────────────────────────── */
