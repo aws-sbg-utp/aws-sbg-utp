@@ -101,7 +101,7 @@ export default function Hero() {
             {/* Technical footnote */}
             <motion.p
               {...fadeUp(0.48)}
-              className="text-[11px] font-mono text-[#656871] tracking-wider uppercase"
+              className="text-[11px] font-mono text-[#9aa3b0] tracking-wider uppercase"
             >
               // COMUNIDAD ESTUDIANTIL UTP • PROGRAMA AWS STUDENT BUILDER GROUPS
             </motion.p>
