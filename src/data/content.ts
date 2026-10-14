@@ -184,7 +184,7 @@ export interface TeamMember {
   role: string
   photoSrc: string
   photoAlt: string
-  links: [TeamMemberLink, TeamMemberLink, TeamMemberLink]
+  links?: TeamMemberLink[]
 }
 
 export const TEAM_MEMBERS: TeamMember[] = [
@@ -194,11 +194,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     role: 'Leader',
     photoSrc: '/assets/photos/team/juanjose.jpg',
     photoAlt: 'Fotografía de Juan Jose Jaramillo Tamayo',
-    links: [
-      { label: 'Enlace 1', url: '' },
-      { label: 'Enlace 2', url: '' },
-      { label: 'Enlace 3', url: '' },
-    ],
   },
   {
     id: 'isabella-fernandez',
@@ -206,11 +201,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     role: 'Partnerships & Resources Lead',
     photoSrc: '/assets/photos/team/isabella.jpeg',
     photoAlt: 'Fotografía de Isabella Fernández Colorado',
-    links: [
-      { label: 'Enlace 1', url: '' },
-      { label: 'Enlace 2', url: '' },
-      { label: 'Enlace 3', url: '' },
-    ],
   },
   {
     id: 'juan-manuel-rojas',
@@ -218,11 +208,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     role: 'Director of Marketing',
     photoSrc: '/assets/photos/team/juanmanuel.jpeg',
     photoAlt: 'Fotografía de Juan Manuel Rojas Muñoz',
-    links: [
-      { label: 'Enlace 1', url: '' },
-      { label: 'Enlace 2', url: '' },
-      { label: 'Enlace 3', url: '' },
-    ],
   },
   {
     id: 'nohora-camila-cardozo',
@@ -230,11 +215,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     role: 'Technical Lead',
     photoSrc: '/assets/photos/team/nohora.jpeg',
     photoAlt: 'Fotografía de Nohora Camila Cardozo Cardenas',
-    links: [
-      { label: 'Enlace 1', url: '' },
-      { label: 'Enlace 2', url: '' },
-      { label: 'Enlace 3', url: '' },
-    ],
   },
   {
     id: 'miguel-angel-quintero',
@@ -242,11 +222,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     role: 'General Coordinator',
     photoSrc: '/assets/photos/team/miguel.jpeg',
     photoAlt: 'Fotografía de Miguel Ángel Quintero Rodríguez',
-    links: [
-      { label: 'Enlace 1', url: '' },
-      { label: 'Enlace 2', url: '' },
-      { label: 'Enlace 3', url: '' },
-    ],
   },
   {
     id: 'manuela-ruiz',
@@ -254,10 +229,5 @@ export const TEAM_MEMBERS: TeamMember[] = [
     role: 'Director of Events and Logistics',
     photoSrc: '/assets/photos/team/manuela.jpeg',
     photoAlt: 'Fotografía de Manuela Ruiz Hoyos',
-    links: [
-      { label: 'Enlace 1', url: '' },
-      { label: 'Enlace 2', url: '' },
-      { label: 'Enlace 3', url: '' },
-    ],
   },
 ]

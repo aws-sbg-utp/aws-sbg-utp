@@ -101,42 +101,31 @@ export default function Team() {
                 </h3>
               </div>
 
-              {/* Three generic link spaces */}
-              <div
-                className="pt-4 border-t border-white/8 flex items-center gap-2.5 mt-5"
-                aria-label={`Espacios de enlaces para ${member.name}`}
-              >
-                {member.links.map((link, idx) => {
-                  const IconComponent = SLOT_ICONS[idx % SLOT_ICONS.length]
-                  const hasUrl = Boolean(link.url && link.url.trim().length > 0)
-
-                  if (hasUrl) {
-                    return (
-                      <a
-                        key={idx}
-                        href={link.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 hover:border-[#44b4ff]/40 hover:text-[#44b4ff] text-white/70 flex items-center justify-center transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#44b4ff]"
-                        aria-label={`${link.label} de ${member.name}`}
-                      >
-                        <IconComponent size={14} aria-hidden="true" />
-                      </a>
-                    )
-                  }
-
-                  return (
-                    <div
-                      key={idx}
-                      className="w-8 h-8 rounded-lg bg-white/5 border border-white/8 text-white/20 flex items-center justify-center cursor-default select-none"
-                      title="Espacio de enlace"
-                      aria-hidden="true"
-                    >
-                      <IconComponent size={14} />
-                    </div>
-                  )
-                })}
-              </div>
+              {/* Member links if available */}
+              {member.links && member.links.some((l) => l.url.trim().length > 0) && (
+                <div
+                  className="pt-4 border-t border-white/8 flex items-center gap-2.5 mt-5"
+                  aria-label={`Enlaces de ${member.name}`}
+                >
+                  {member.links
+                    .filter((l) => l.url.trim().length > 0)
+                    .map((link, idx) => {
+                      const IconComponent = SLOT_ICONS[idx % SLOT_ICONS.length]
+                      return (
+                        <a
+                          key={idx}
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 hover:border-[#44b4ff]/40 hover:text-[#44b4ff] text-white/70 flex items-center justify-center transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#44b4ff]"
+                          aria-label={`${link.label} de ${member.name}`}
+                        >
+                          <IconComponent size={14} aria-hidden="true" />
+                        </a>
+                      )
+                    })}
+                </div>
+              )}
             </motion.article>
           ))}
         </motion.div>
