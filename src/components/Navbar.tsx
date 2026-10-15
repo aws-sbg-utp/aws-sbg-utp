@@ -80,6 +80,9 @@ export default function Navbar() {
                 width="32"
                 height="32"
               />
+              <span className="font-bold text-white tracking-tight text-sm hidden sm:inline-block">
+                AWS SBG <span className="text-brand-blue font-semibold">UTP</span>
+              </span>
             </a>
 
             {/* Desktop nav links */}
@@ -105,7 +108,7 @@ export default function Navbar() {
                 icon={ArrowUpRight}
                 id="nav-cta-desktop"
               >
-                Ver eventos
+                Próximas actividades
               </CtaButton>
             </div>
 
