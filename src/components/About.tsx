@@ -39,15 +39,14 @@ export default function About() {
           <div className="space-y-6 lg:pt-2">
             <p className="text-navy text-lg sm:text-xl font-normal leading-relaxed text-pretty">
               El <strong className="font-bold">AWS Student Builder Group UTP</strong> reúne a estudiantes
-              que quieren entender cómo funciona la nube en el mundo real. No somos una materia más ni
+              que quieren entender cómo funciona la nube en proyectos reales. No somos una materia más ni
               un curso tradicional: nos organizamos entre estudiantes para aprender conceptos, hacer
-              talleres prácticos y ayudarnos entre todos a avanzar.
+              talleres prácticos y resolver dudas en equipo.
             </p>
 
             <p className="text-muted-light text-base sm:text-lg font-normal leading-relaxed text-pretty">
-              El grupo está abierto a cualquier estudiante de la UTP, sin importar la carrera, si estás
-              en primeros semestres o terminando la universidad, y sin necesidad de tener conocimientos
-              previos sobre Amazon Web Services.
+              El grupo está abierto a cualquier estudiante de la UTP, desde primeros hasta últimos
+              semestres, sin importar la carrera ni si ya has usado Amazon Web Services antes.
             </p>
 
             {/* AWS endorsement note */}
@@ -61,9 +60,9 @@ export default function About() {
                 decoding="async"
               />
               <p>
-                Contamos con el respaldo de AWS Student Builder Groups, el programa oficial de
-                Amazon Web Services que apoya a comunidades universitarias en todo el mundo con
-                recursos, guías y beneficios para estudiantes.
+                Formamos parte de AWS Student Builder Groups, el programa oficial de Amazon Web Services
+                que apoya a comunidades universitarias en todo el mundo con recursos, guías técnicas y
+                beneficios para estudiantes.
               </p>
             </div>
           </div>

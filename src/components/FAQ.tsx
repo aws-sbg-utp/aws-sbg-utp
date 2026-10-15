@@ -30,11 +30,11 @@ export default function FAQ() {
               id="faq-heading"
               className="text-3xl sm:text-4xl lg:text-5xl font-black text-navy leading-tight tracking-tight text-balance mb-4"
             >
-              Resolvemos tus dudas
+              Preguntas frecuentes
             </h2>
             <p className="text-muted-light text-base sm:text-lg max-w-xl mx-auto leading-relaxed text-pretty">
-              Todo lo que necesitas saber sobre cómo funciona el grupo, los talleres y el uso de las
-              herramientas de AWS.
+              Respuestas claras sobre cómo funciona el grupo, la dinámica de los talleres y el uso
+              de las herramientas de AWS.
             </p>
           </div>
 

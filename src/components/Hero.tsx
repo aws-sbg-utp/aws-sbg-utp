@@ -58,10 +58,9 @@ export default function Hero() {
               {...fadeUp(0.26)}
               className="text-muted-dark text-lg sm:text-xl leading-relaxed mb-8 max-w-xl text-pretty"
             >
-              Somos el AWS Student Builder Group de la Universidad Tecnológica de Pereira: un
-              espacio abierto para estudiantes de cualquier carrera que quieran aprender cómo
-              funciona la nube, probar los servicios de AWS en la práctica y crear proyectos
-              juntos.
+              Somos la comunidad estudiantil de AWS en la Universidad Tecnológica de Pereira: un
+              espacio abierto para estudiantes de cualquier carrera que quieran aprender sobre la
+              nube, probar los servicios de AWS en la práctica y crear proyectos juntos.
             </motion.p>
 
             {/* CTAs — Meetup primary, WhatsApp secondary */}
@@ -165,7 +164,7 @@ export default function Hero() {
               {/* Transparent metrics strip */}
               <div className="mt-6 pt-5 border-t border-white/8 grid grid-cols-3 gap-2 text-center">
                 <div className="bg-white/5 rounded-lg py-2.5 px-2">
-                  <span className="text-xs font-bold text-white block">100% Gratis</span>
+                  <span className="text-xs font-bold text-white block">Acceso libre</span>
                   <span className="text-[11px] text-muted-dark">Sin costo</span>
                 </div>
                 <div className="bg-white/5 rounded-lg py-2.5 px-2">

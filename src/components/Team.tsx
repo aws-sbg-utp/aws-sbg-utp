@@ -46,10 +46,10 @@ export default function Team() {
             id="equipo-heading"
             className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight tracking-tight text-balance mb-4"
           >
-            Quiénes estamos detrás del grupo
+            Equipo organizador
           </h2>
           <p className="text-muted-dark text-base sm:text-lg max-w-2xl leading-relaxed text-pretty">
-            Somos el equipo de estudiantes de la UTP encargado de organizar los talleres, preparar
+            Somos el equipo de estudiantes de la UTP encargado de planear los talleres, preparar
             las demos y coordinar la comunidad.
           </p>
         </motion.div>

@@ -60,7 +60,7 @@ export const WHAT_WE_DO_BLOCKS: WhatWeDoBlock[] = [
     badge: 'Laboratorios',
     title: 'Talleres y demos en vivo',
     description:
-      'No nos quedamos solo en la teoría. Hacemos ejercicios prácticos directamente en la consola de AWS para aprender a configurar y desplegar servicios paso a paso.',
+      'Hacemos ejercicios prácticos guiados directamente en la consola de AWS para aprender a configurar, conectar y desplegar servicios paso a paso.',
     iconSrc: '/assets/icons/bolt-icons/bolt-icon-blue.svg',
     iconAlt: 'Práctica guiada',
     accentColor: '#ff9900',
@@ -76,9 +76,9 @@ export const WHAT_WE_DO_BLOCKS: WhatWeDoBlock[] = [
     id: 'comunidad',
     step: '03',
     badge: 'Comunidad',
-    title: 'Comunidad y crecimiento',
+    title: 'Comunidad y estudio',
     description:
-      'Un espacio para hacer preguntas con confianza, compartir recursos de estudio, prepararnos para certificaciones oficiales y conocer gente de otras carreras.',
+      'Un espacio para resolver dudas sin complicaciones, compartir material de estudio, prepararnos para certificaciones oficiales y conocer compañeros de otras carreras.',
     iconSrc: '/assets/icons/team-icons/team-icon-blue.svg',
     iconAlt: 'Comunidad y crecimiento',
     accentColor: '#03e582',
@@ -87,7 +87,7 @@ export const WHAT_WE_DO_BLOCKS: WhatWeDoBlock[] = [
     hoverBorderColor: 'hover:border-brand-green/50',
     bullets: [
       'Apoyo entre compañeros para estudiar y resolver dudas técnicas',
-      'Guías para aprovechar plataformas gratuitas como AWS Builder Center',
+      'Guías para aprovechar plataformas oficiales gratuitas como AWS Builder Center y AWS Skill Builder',
     ],
   },
 ]
@@ -118,7 +118,7 @@ export const HOW_TO_JOIN_STEPS: PathStep[] = [
     step: '02',
     label: 'Únete a la página de Meetup',
     description:
-      'Allí publicamos el calendario oficial de cada charla o taller (virtual o presencial) para que puedas registrarte y separar tu cupo.',
+      'Allí publicamos el calendario oficial de cada charla o taller (virtual o presencial) para que confirmes tu asistencia y recibas recordatorios.',
     iconSrc: '/assets/icons/speaker-icons/speaker-icon-white.svg',
     iconAlt: 'Meetup oficial',
     actionLabel: 'Ver grupo en Meetup →',
@@ -128,7 +128,7 @@ export const HOW_TO_JOIN_STEPS: PathStep[] = [
     step: '03',
     label: 'Conéctate a tu primera sesión',
     description:
-      'Asiste a las sesiones virtuales o acompáñanos cuando hagamos actividades en el campus. Solo necesitas ganas de aprender.',
+      'Conéctate a las sesiones virtuales o acompáñanos cuando hagamos actividades presenciales en el campus de la UTP.',
     iconSrc: '/assets/icons/trophy-icons/trophy-icon-white.svg',
     iconAlt: 'Primera sesión',
     actionLabel: 'Abierto a estudiantes UTP',
@@ -150,13 +150,13 @@ export const FAQ_ITEMS: FaqItem[] = [
     id: 'costo',
     question: '¿Participar en la comunidad tiene algún costo?',
     answer:
-      'Para nada. Todas las charlas, talleres y actividades que organizamos en el AWS Student Builder Group UTP son 100% gratuitos.',
+      'No, ninguna actividad tiene costo. Todas las charlas, talleres y espacios de estudio que organizamos en el grupo son 100% gratuitos.',
   },
   {
     id: 'cobros-aws',
     question: '¿Se generan cobros al usar Amazon Web Services?',
     answer:
-      'Para asistir a las sesiones y seguir nuestras demos no necesitas tener una cuenta de AWS ni registrar tarjeta de crédito; además, te enseñaremos a usar recursos gratuitos para estudiantes como AWS Builder Center. Si decides crear una cuenta personal por tu cuenta para practicar, solo debes tener cuidado de mantenerte dentro de los límites de la capa gratuita (AWS Free Tier) para que no te generen cobros.',
+      'Para asistir a las sesiones y seguir nuestras demos no necesitas tener una cuenta de AWS ni registrar tarjeta de crédito; además, te enseñaremos a usar recursos gratuitos para estudiantes como AWS Builder Center y AWS Skill Builder. Si decides abrir una cuenta personal para practicar por tu lado, te explicamos cómo mantenerte dentro de los límites de la capa gratuita (AWS Free Tier) para evitar cobros.',
   },
   {
     id: 'experiencia',

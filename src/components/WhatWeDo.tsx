@@ -45,8 +45,8 @@ export default function WhatWeDo() {
             Cómo aprendemos en el grupo
           </h2>
           <p className="text-muted-light text-base sm:text-lg max-w-2xl leading-relaxed text-pretty">
-            Nuestras sesiones combinan teoría al grano, práctica en vivo con herramientas reales y
-            espacios para resolver dudas entre todos.
+            Nuestras sesiones combinan explicaciones claras, práctica en vivo en la consola de AWS
+            y espacios abiertos para resolver dudas entre todos.
           </p>
         </motion.div>
 

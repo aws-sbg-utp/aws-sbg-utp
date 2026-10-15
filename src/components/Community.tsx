@@ -189,7 +189,7 @@ export default function Community() {
                 GitHub
               </h4>
               <p className="text-muted-dark text-xs leading-relaxed">
-                Repositorios, guías y código que usamos en las demos.
+                Repositorios con el código y las guías prácticas de los talleres.
               </p>
             </div>
             <div className="flex items-center justify-between pt-3 mt-4 border-t border-white/8 text-xs font-semibold text-brand-blue">
@@ -276,7 +276,7 @@ export default function Community() {
                 LinkedIn
               </h4>
               <p className="text-muted-dark text-xs leading-relaxed">
-                Página oficial para conectar y compartir lo que hacemos.
+                Página oficial para conectar, compartir eventos y dar visibilidad a la comunidad.
               </p>
             </div>
             <div className="flex items-center justify-between pt-3 mt-4 border-t border-white/8 text-xs font-semibold text-brand-blue">

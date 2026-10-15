@@ -46,7 +46,7 @@ export default function LearningPath() {
             Cómo sumarte a la comunidad
           </h2>
           <p className="text-muted-light text-base sm:text-lg max-w-xl leading-relaxed text-pretty">
-            Para participar no necesitas inscripciones complicadas ni cumplir requisitos previos.
+            Para participar no necesitas procesos de inscripción ni cumplir requisitos previos.
             Solo sigue estos tres pasos:
           </p>
         </motion.div>

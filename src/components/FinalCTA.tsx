@@ -39,8 +39,8 @@ export default function FinalCTA() {
           </h2>
 
           <p className="text-muted-dark text-base sm:text-lg mb-10 max-w-lg mx-auto leading-relaxed text-pretty">
-            Entra al grupo de WhatsApp para estar al día con los anuncios o revisa en Meetup cuál
-            es nuestro próximo taller para inscribirte.
+            Entra al grupo de WhatsApp para estar al día con los anuncios o revisa en Meetup la
+            fecha de nuestro próximo taller para sumarte.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3.5 justify-center mb-8">
