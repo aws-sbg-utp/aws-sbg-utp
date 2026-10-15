@@ -1,20 +1,32 @@
 import { useRef } from 'react'
 import { motion, useInView, useReducedMotion } from 'framer-motion'
-import { PATH_STEPS } from '../data/content'
+import { ArrowUpRight } from 'lucide-react'
+import { HOW_TO_JOIN_STEPS } from '../data/content'
 import { SectionTag } from './ui/SectionTag'
-import { EASE_SMOOTH } from '../lib/motion'
+import { EASE_SMOOTH, createStaggerContainer } from '../lib/motion'
 
 export default function LearningPath() {
   const ref = useRef<HTMLElement>(null)
   const isInView = useInView(ref, { once: true, margin: '-80px 0px' })
   const prefersReducedMotion = useReducedMotion()
 
+  const staggerVariants = createStaggerContainer(0.12, 0.1, prefersReducedMotion)
+
+  const cardVariants = {
+    hidden: prefersReducedMotion ? {} : { opacity: 0, y: 24 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: EASE_SMOOTH },
+    },
+  }
+
   return (
     <section
       ref={ref}
-      id="nuestro-camino"
-      className="section-padding bg-white"
-      aria-labelledby="camino-heading"
+      id="como-participar"
+      className="section-padding bg-surface-subtle border-t border-navy/6"
+      aria-labelledby="participar-heading"
     >
       <div className="container-base">
         {/* Header */}
@@ -22,97 +34,75 @@ export default function LearningPath() {
           initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.55, ease: EASE_SMOOTH }}
-          className="mb-14 lg:mb-18"
+          className="mb-12 lg:mb-16"
         >
           <div className="mb-4">
-            <SectionTag label="03 // RUTA DE APRENDIZAJE" variant="light" />
+            <SectionTag label="PRIMEROS PASOS" variant="light" />
           </div>
           <h2
-            id="camino-heading"
-            className="text-3xl sm:text-4xl lg:text-5xl font-black text-navy leading-tight tracking-tight mb-4"
+            id="participar-heading"
+            className="text-3xl sm:text-4xl lg:text-5xl font-black text-navy leading-tight tracking-tight text-balance mb-4"
           >
-            Nuestro camino
+            Cómo sumarte a la comunidad
           </h2>
-          <p className="text-muted-light text-base sm:text-lg max-w-xl leading-relaxed">
-            Una orientación paso a paso para integrarte a la comunidad y avanzar a tu propio ritmo.
+          <p className="text-muted-light text-base sm:text-lg max-w-xl leading-relaxed text-pretty">
+            Si quieres participar en las actividades, no necesitas postularte formalmente ni cumplir
+            requisitos previos. Puedes integrarte siguiendo estos tres pasos:
           </p>
         </motion.div>
 
-        {/* Steps — Blueprint Roadmap */}
-        <div className="relative">
-
-          {/* Horizontal connector line — desktop only (aligned to circle center at 1.75rem) */}
-          <div
-            className="hidden lg:block absolute top-[1.75rem] left-[1.75rem] right-[1.75rem] h-px"
-            aria-hidden="true"
-          >
+        {/* Steps Grid */}
+        <motion.div
+          variants={staggerVariants}
+          initial="hidden"
+          animate={isInView ? 'visible' : 'hidden'}
+          className="grid md:grid-cols-3 gap-6"
+          role="list"
+          aria-label="Pasos para integrarse a la comunidad"
+        >
+          {HOW_TO_JOIN_STEPS.map((step) => (
             <motion.div
-              className="h-full bg-gradient-to-r from-brand-blue-dark/40 via-brand-blue/40 to-brand-blue-dark/20"
-              initial={{ scaleX: 0, originX: 0 }}
-              animate={isInView ? { scaleX: 1 } : {}}
-              transition={{ duration: 0.9, delay: 0.3, ease: EASE_SMOOTH }}
-            />
-          </div>
+              key={step.step}
+              variants={cardVariants}
+              role="listitem"
+              className="rounded-2xl bg-white border border-navy/10 hover:border-brand-blue-dark/40 p-6 sm:p-7 flex flex-col justify-between group shadow-sm transition-all duration-300"
+            >
+              <div>
+                <div className="flex items-center justify-between mb-5">
+                  <span className="w-10 h-10 rounded-xl bg-navy text-white font-mono font-bold text-sm flex items-center justify-center shadow-sm">
+                    {step.step}
+                  </span>
+                  <span className="text-xs text-muted-light font-medium">Paso directo</span>
+                </div>
 
-          <div
-            className="grid lg:grid-cols-4 gap-0 lg:gap-6"
-            role="list"
-            aria-label="Etapas del camino"
-          >
-            {PATH_STEPS.map((step, index) => (
-              <motion.div
-                key={step.label}
-                initial={prefersReducedMotion ? {} : { opacity: 0, y: 24 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{
-                  duration: 0.55,
-                  delay: prefersReducedMotion ? 0 : 0.2 + index * 0.12,
-                  ease: EASE_SMOOTH,
-                }}
-                role="listitem"
-                className="relative flex lg:flex-col items-start lg:items-start gap-4 lg:gap-0"
-              >
-                {/* Mobile vertical connector */}
-                {index < PATH_STEPS.length - 1 && (
-                  <div
-                    className="lg:hidden absolute left-[1.75rem] top-[3.5rem] w-px h-[calc(100%-3.5rem)] bg-brand-blue-dark/25"
-                    aria-hidden="true"
-                  />
+                <h3 className="text-xl font-bold text-navy mb-2.5">
+                  {step.label}
+                </h3>
+                <p className="text-muted-light text-sm leading-relaxed mb-6">
+                  {step.description}
+                </p>
+              </div>
+
+              <div className="pt-4 border-t border-navy/8">
+                {step.actionHref ? (
+                  <a
+                    href={step.actionHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-blue-dark hover:text-navy transition-colors"
+                  >
+                    <span>{step.actionLabel}</span>
+                    <ArrowUpRight size={15} aria-hidden="true" />
+                  </a>
+                ) : (
+                  <span className="text-xs font-medium text-muted-light">
+                    {step.actionLabel}
+                  </span>
                 )}
-
-                {/* Step circle */}
-                <div
-                  className="relative z-10 flex-shrink-0 w-[3.5rem] h-[3.5rem] rounded-full bg-navy border-2 border-brand-blue/30 flex items-center justify-center lg:mb-5 shadow-sm"
-                  aria-hidden="true"
-                >
-                  <img
-                    src={step.iconSrc}
-                    alt=""
-                    className="w-5 h-5 opacity-85"
-                    width="20"
-                    height="20"
-                    decoding="async"
-                  />
-                </div>
-
-                {/* Text content */}
-                <div className="pb-8 lg:pb-0">
-                  <div className="flex items-center gap-2 mb-1.5">
-                    <span className="text-[11px] font-mono font-bold text-brand-blue-dark tracking-wider uppercase" aria-hidden="true">
-                      FASE {step.step}
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-bold text-navy mb-1.5">
-                    {step.label}
-                  </h3>
-                  <p className="text-muted-light text-sm leading-relaxed">
-                    {step.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   )

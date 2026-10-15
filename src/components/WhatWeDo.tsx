@@ -12,20 +12,20 @@ export default function WhatWeDo() {
   const staggerVariants = createStaggerContainer(0.12, 0.1, prefersReducedMotion)
 
   const cardVariants = {
-    hidden: prefersReducedMotion ? {} : { opacity: 0, y: 28 },
+    hidden: prefersReducedMotion ? {} : { opacity: 0, y: 24 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.55, ease: EASE_SMOOTH },
+      transition: { duration: 0.5, ease: EASE_SMOOTH },
     },
   }
 
   return (
     <section
       ref={ref}
-      id="que-hacemos"
-      className="section-padding bg-navy"
-      aria-labelledby="que-hacemos-heading"
+      id="dinamica"
+      className="section-padding bg-white border-t border-navy/6"
+      aria-labelledby="dinamica-heading"
     >
       <div className="container-base">
         {/* Header */}
@@ -36,16 +36,17 @@ export default function WhatWeDo() {
           className="mb-12 lg:mb-16"
         >
           <div className="mb-4">
-            <SectionTag label="02 // LO QUE HACEMOS" />
+            <SectionTag label="DINÁMICA DE APRENDIZAJE" variant="light" />
           </div>
           <h2
-            id="que-hacemos-heading"
-            className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight tracking-tight mb-4"
+            id="dinamica-heading"
+            className="text-3xl sm:text-4xl lg:text-5xl font-black text-navy leading-tight tracking-tight text-balance mb-4"
           >
-            Nuestra dinámica de aprendizaje
+            Cómo aprendemos y colaboramos
           </h2>
-          <p className="text-muted-dark text-base sm:text-lg max-w-2xl leading-relaxed">
-            Tres ejes de actividad para aprender conceptos, practicar con herramientas de AWS y conectar con la comunidad.
+          <p className="text-muted-light text-base sm:text-lg max-w-2xl leading-relaxed text-pretty">
+            Nuestras actividades combinan explicaciones conceptuales, práctica con herramientas y
+            espacios de intercambio entre estudiantes.
           </p>
         </motion.div>
 
@@ -63,36 +64,42 @@ export default function WhatWeDo() {
               key={block.id}
               variants={cardVariants}
               role="listitem"
-              className={`rounded-xl bg-navy-card/90 border ${block.borderColor} p-6 sm:p-7 relative flex flex-col justify-between group ${block.hoverBorderColor} transition-all duration-300`}
+              className="rounded-2xl bg-surface-subtle border border-navy/10 hover:border-brand-blue-dark/40 p-6 sm:p-7 relative flex flex-col justify-between group shadow-sm transition-all duration-300"
             >
               <div>
-                <div className="flex items-center justify-between mb-6">
-                  <span className={`text-[11px] font-mono font-bold tracking-widest uppercase ${block.badgeBg} px-2.5 py-1 rounded border`}>
+                <div className="flex items-center justify-between mb-5">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-brand-blue-dark bg-brand-blue-dark/10 border border-brand-blue-dark/20 px-2.5 py-1 rounded-md">
                     {block.badge}
                   </span>
-                  <span className="text-3xl font-black font-mono text-white/10 select-none" aria-hidden="true">
-                    {block.step}
+                  <span className="text-xs font-bold font-mono text-muted-light/60 select-none">
+                    EJE {block.step}
                   </span>
                 </div>
-                <div className={`w-12 h-12 rounded-lg ${block.badgeBg} flex items-center justify-center mb-5 group-hover:scale-105 transition-transform duration-300`}>
+
+                <div className="w-12 h-12 rounded-xl bg-white border border-navy/10 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform duration-300 shadow-sm">
                   <img
                     src={block.iconSrc}
                     alt={block.iconAlt}
-                    className="w-7 h-7"
-                    width="28"
-                    height="28"
+                    className="w-6 h-6"
+                    width="24"
+                    height="24"
                   />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-3">
+
+                <h3 className="text-xl font-bold text-navy mb-2.5">
                   {block.title}
                 </h3>
-                <p className="text-muted-dark text-sm leading-relaxed mb-6">
+                <p className="text-muted-light text-sm leading-relaxed mb-6">
                   {block.description}
                 </p>
               </div>
-              <div className="pt-4 border-t border-white/8 text-xs font-mono text-text-subtle-dark space-y-1.5">
+
+              <div className="pt-4 border-t border-navy/8 text-xs text-muted-light space-y-2">
                 {block.bullets.map((bullet, idx) => (
-                  <div key={idx} className="text-white/80">▸ {bullet}</div>
+                  <div key={idx} className="flex items-start gap-1.5 text-navy/80">
+                    <span className="text-brand-blue-dark font-bold">▸</span>
+                    <span>{bullet}</span>
+                  </div>
                 ))}
               </div>
             </motion.article>
