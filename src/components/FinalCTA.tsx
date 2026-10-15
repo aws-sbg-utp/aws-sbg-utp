@@ -29,19 +29,18 @@ export default function FinalCTA() {
 
       <div className="container-base relative z-10">
         <div className="max-w-2xl mx-auto text-center">
-          {/* Technical Tag */}
+          {/* Editorial Tag */}
           <div className="inline-flex justify-center mb-6">
-            <SectionTag label="EMPIEZA HOY // UTP BUILDERS" hasDot />
+            <SectionTag label="EMPIEZA CON NOSOTROS" />
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-[1.12] tracking-tight mb-5">
-            ¿Listo para empezar
-            <br />
-            <span className="text-gradient-blue">a construir en la nube?</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-[1.12] tracking-tight text-balance mb-5">
+            Conéctate al próximo encuentro
           </h2>
 
-          <p className="text-muted-dark text-base sm:text-lg mb-10 max-w-lg mx-auto leading-relaxed">
-            Encuentra las próximas sesiones en Meetup o comunícate a través del grupo de WhatsApp.
+          <p className="text-muted-dark text-base sm:text-lg mb-10 max-w-lg mx-auto leading-relaxed text-pretty">
+            Únete al grupo de WhatsApp para conocer las novedades o consulta en Meetup las sesiones
+            programadas. La comunidad está abierta para ti.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3.5 justify-center mb-8">
@@ -51,19 +50,19 @@ export default function FinalCTA() {
               icon={ArrowUpRight}
               id="final-cta-meetup"
             >
-              Ver eventos en Meetup
+              Consultar eventos en Meetup
             </CtaButton>
             <CtaButton
               href={SOCIAL_LINKS.whatsapp}
               variant="outline-white"
               id="final-cta-whatsapp"
             >
-              Únete a la comunidad
+              Entrar al grupo de WhatsApp
             </CtaButton>
           </div>
 
-          <p className="text-xs font-mono text-muted-dark tracking-wider uppercase">
-            // UNIVERSIDAD TECNOLÓGICA DE PEREIRA
+          <p className="text-xs text-text-subtle-dark tracking-wide">
+            Universidad Tecnológica de Pereira • Pereira, Colombia
           </p>
         </div>
       </div>

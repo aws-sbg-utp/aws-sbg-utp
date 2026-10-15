@@ -48,16 +48,15 @@ src/
 │   │   ├── SectionTag.tsx
 │   │   └── CtaButton.tsx
 │   ├── Navbar.tsx        # Navegación sticky con menú mobile
-│   ├── Hero.tsx          # Sección principal con terminal interactivo
-│   ├── About.tsx         # ¿Qué es el AWS SBG? y sello institucional
-│   ├── WhatWeDo.tsx      # Tres ejes: Aprende · Construye · Conecta
-│   ├── LearningPath.tsx  # Nuestro camino (roadmap progresivo)
-│   ├── Events.tsx        # Próximas actividades → Meetup
-│   ├── Community.tsx     # Canales de la comunidad
+│   ├── Hero.tsx          # Sección principal y ficha comunitaria UTP
+│   ├── About.tsx         # Sobre el grupo y sello institucional
+│   ├── WhatWeDo.tsx      # Dinámica de actividades (Fundamentos · Práctica · Comunidad)
+│   ├── LearningPath.tsx  # Primeros pasos (guía para nuevos integrantes)
+│   ├── Community.tsx     # Encuentros en Meetup, WhatsApp y canales oficiales
 │   ├── Team.tsx          # Integrantes del equipo coordinador
 │   ├── FAQ.tsx           # Acordeón de preguntas frecuentes
-│   ├── FinalCTA.tsx      # CTA de cierre
-│   ├── Footer.tsx        # Pie de página con enlaces y branding
+│   ├── FinalCTA.tsx      # Llamado a la acción final
+│   ├── Footer.tsx        # Pie de página con enlaces y atribución
 │   └── AnimatedSection.tsx # Wrapper de animaciones con Framer Motion
 ├── data/
 │   └── content.ts        # Contenido centralizado (textos, FAQs, equipo, links)

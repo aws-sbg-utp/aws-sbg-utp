@@ -19,11 +19,10 @@ const SOCIAL_ITEMS: SocialItem[] = [
 ]
 
 const FOOTER_LINKS = [
-  { label: '¿Qué es?', href: '#que-es' },
-  { label: '¿Qué hacemos?', href: '#que-hacemos' },
-  { label: 'Nuestro camino', href: '#nuestro-camino' },
-  { label: 'Eventos', href: '#eventos' },
-  { label: 'Comunidad', href: '#comunidad' },
+  { label: 'Sobre el grupo', href: '#sobre-el-grupo' },
+  { label: 'Dinámica', href: '#dinamica' },
+  { label: 'Cómo participar', href: '#como-participar' },
+  { label: 'Encuentros', href: '#encuentros' },
   { label: 'Equipo', href: '#equipo' },
   { label: 'Preguntas frecuentes', href: '#faq' },
 ]
@@ -31,7 +30,7 @@ const FOOTER_LINKS = [
 export default function Footer() {
   return (
     <footer
-      className="bg-navy border-t-2 border-brand-blue/20"
+      className="bg-navy border-t border-white/10"
       role="contentinfo"
       aria-label="Pie de página"
     >
@@ -51,7 +50,8 @@ export default function Footer() {
               />
             </div>
             <p className="text-muted-dark text-sm leading-relaxed max-w-xs mb-1">
-              Comunidad de estudiantes de la Universidad Tecnológica de Pereira para aprender y construir en torno a AWS y computación en la nube.
+              Comunidad de estudiantes de la Universidad Tecnológica de Pereira orientada al
+              aprendizaje y práctica de computación en la nube con Amazon Web Services.
             </p>
 
             {/* Email */}
@@ -69,7 +69,7 @@ export default function Footer() {
               <img
                 src="/assets/branding/aws-logo-white.svg"
                 alt="Amazon Web Services"
-                className="h-4 w-auto opacity-20"
+                className="h-4 w-auto opacity-30"
                 width="27"
                 height="16"
                 decoding="async"
@@ -79,8 +79,8 @@ export default function Footer() {
 
           {/* Navigation links */}
           <div>
-            <h3 className="font-mono text-xs font-bold text-white uppercase tracking-widest mb-4">
-              // NAVEGACIÓN
+            <h3 className="text-xs font-bold text-white uppercase tracking-wider mb-4">
+              Navegación
             </h3>
             <nav aria-label="Links del footer">
               <ul className="space-y-2.5" role="list">
@@ -100,8 +100,8 @@ export default function Footer() {
 
           {/* Social links */}
           <div>
-            <h3 className="font-mono text-xs font-bold text-white uppercase tracking-widest mb-4">
-              // CANALES
+            <h3 className="text-xs font-bold text-white uppercase tracking-wider mb-4">
+              Canales oficiales
             </h3>
             <ul className="space-y-2.5" role="list">
               {SOCIAL_ITEMS.map((item) => (
@@ -123,11 +123,12 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p className="text-muted-dark text-xs">
-            © {CURRENT_YEAR} AWS Student Builder Group at UTP. Todos los derechos reservados.
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-muted-dark">
+          <p>
+            © {CURRENT_YEAR} AWS Student Builder Group at UTP. Comunidad universitaria independiente
+            respaldada por el programa AWS Student Builder Groups.
           </p>
-          <p className="text-muted-dark text-xs">
+          <p>
             Pereira, Colombia
           </p>
         </div>

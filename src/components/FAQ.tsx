@@ -24,16 +24,17 @@ export default function FAQ() {
           {/* Header */}
           <div className="text-center mb-12 lg:mb-14">
             <div className="mb-4 inline-flex justify-center">
-              <SectionTag label="07 // PREGUNTAS FRECUENTES" variant="light" />
+              <SectionTag label="DUDAS HABITUALES" variant="light" />
             </div>
             <h2
               id="faq-heading"
-              className="text-3xl sm:text-4xl lg:text-5xl font-black text-navy leading-tight tracking-tight mb-4"
+              className="text-3xl sm:text-4xl lg:text-5xl font-black text-navy leading-tight tracking-tight text-balance mb-4"
             >
               Preguntas frecuentes
             </h2>
-            <p className="text-muted-light text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
-              Respuestas a dudas habituales sobre la comunidad, requisitos y cómo participar.
+            <p className="text-muted-light text-base sm:text-lg max-w-xl mx-auto leading-relaxed text-pretty">
+              Respuestas claras y transparentes sobre la dinámica del grupo, los requisitos de
+              participación y el uso de AWS.
             </p>
           </div>
 
