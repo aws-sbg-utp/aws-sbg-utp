@@ -1,30 +1,20 @@
 import { useRef } from 'react'
 import { motion, useInView, useReducedMotion } from 'framer-motion'
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, Mail } from 'lucide-react'
 import { SOCIAL_LINKS } from '../data/content'
 import { SectionTag } from './ui/SectionTag'
-import { EASE_SMOOTH } from '../lib/motion'
-
-// Inline SVG platform logos — recognizable brand icons
-// Using simple, clean SVG paths that match each platform's identity
+import { CtaButton } from './ui/CtaButton'
+import { EASE_SMOOTH, createStaggerContainer } from '../lib/motion'
 
 function MeetupIcon({ className }: { className?: string }) {
   return (
     <img
-      src="/assets/icons/social/meetup-black.png"
+      src="/assets/icons/social/meetup.png"
       alt="Meetup"
       className={`${className ?? 'w-6 h-6'} object-contain`}
       width="24"
       height="24"
     />
-  )
-}
-
-function InstagramIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-    </svg>
   )
 }
 
@@ -40,6 +30,14 @@ function GitHubIcon({ className }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+    </svg>
+  )
+}
+
+function InstagramIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
     </svg>
   )
 }
@@ -60,87 +58,19 @@ function LinkedInIcon({ className }: { className?: string }) {
   )
 }
 
-interface Channel {
-  id: string
-  label: string
-  description: string
-  href: string
-  icon: React.ReactNode
-  tag: string
-  actionText: string
-}
-
-const PRIMARY_CHANNELS: Channel[] = [
-  {
-    id: 'meetup',
-    label: 'Meetup',
-    description: 'Consulta las fechas de actividades y confirma tu asistencia.',
-    href: SOCIAL_LINKS.meetup,
-    icon: <MeetupIcon className="w-6 h-6" />,
-    tag: 'Eventos',
-    actionText: 'Ver actividades en Meetup',
-  },
-  {
-    id: 'whatsapp',
-    label: 'WhatsApp',
-    description: 'Espacio de mensajería para comunicarte con otros integrantes de la comunidad.',
-    href: SOCIAL_LINKS.whatsapp,
-    icon: <WhatsAppIcon className="w-6 h-6" />,
-    tag: 'Grupo de chat',
-    actionText: 'Unirse al grupo',
-  },
-]
-
-const SECONDARY_CHANNELS: Channel[] = [
-  {
-    id: 'github',
-    label: 'GitHub',
-    description: 'Espacio de la comunidad para proyectos y recursos en código abierto.',
-    href: SOCIAL_LINKS.github,
-    icon: <GitHubIcon className="w-5 h-5" />,
-    tag: 'Código',
-    actionText: 'Ver GitHub',
-  },
-  {
-    id: 'instagram',
-    label: 'Instagram',
-    description: 'Novedades, avisos y publicaciones sobre la comunidad.',
-    href: SOCIAL_LINKS.instagram,
-    icon: <InstagramIcon className="w-5 h-5" />,
-    tag: 'Social',
-    actionText: 'Ver perfil',
-  },
-  {
-    id: 'youtube',
-    label: 'YouTube',
-    description: 'Canal de vídeos y transmisiones de la comunidad.',
-    href: SOCIAL_LINKS.youtube,
-    icon: <YouTubeIcon className="w-5 h-5" />,
-    tag: 'Video',
-    actionText: 'Ver canal',
-  },
-  {
-    id: 'linkedin',
-    label: 'LinkedIn',
-    description: 'Página de la comunidad en LinkedIn para seguir su presencia profesional.',
-    href: SOCIAL_LINKS.linkedin,
-    icon: <LinkedInIcon className="w-5 h-5" />,
-    tag: 'Red Profesional',
-    actionText: 'Ver página',
-  },
-]
-
 export default function Community() {
   const ref = useRef<HTMLElement>(null)
   const isInView = useInView(ref, { once: true, margin: '-80px 0px' })
   const prefersReducedMotion = useReducedMotion()
 
+  const staggerVariants = createStaggerContainer(0.1, 0.1, prefersReducedMotion)
+
   return (
     <section
       ref={ref}
-      id="comunidad"
-      className="section-padding bg-white"
-      aria-labelledby="comunidad-heading"
+      id="encuentros"
+      className="section-padding bg-navy border-t border-white/8"
+      aria-labelledby="encuentros-heading"
     >
       <div className="container-base">
         {/* Header */}
@@ -151,94 +81,223 @@ export default function Community() {
           className="mb-12 lg:mb-16"
         >
           <div className="mb-4">
-            <SectionTag label="05 // CANALES OFICIALES" variant="light" />
+            <SectionTag label="ENCUENTROS Y COMUNICACIÓN" />
           </div>
           <h2
-            id="comunidad-heading"
-            className="text-3xl sm:text-4xl lg:text-5xl font-black text-navy leading-tight tracking-tight mb-4"
+            id="encuentros-heading"
+            className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight tracking-tight text-balance mb-4"
           >
-            Conecta con la comunidad
+            Dónde nos encontramos
           </h2>
-          <p className="text-muted-light text-base sm:text-lg max-w-xl leading-relaxed">
-            Canales para consultar actividades, comunicarte con el grupo y seguir nuestras publicaciones.
+          <p className="text-muted-dark text-base sm:text-lg max-w-xl leading-relaxed text-pretty">
+            Organizamos actividades periódicas y mantenemos canales abiertos para que puedas
+            comunicarte con el grupo en cualquier momento.
           </p>
         </motion.div>
 
-        {/* Tier 1: Primary Featured Channels (Meetup & WhatsApp) */}
-        <ul className="grid md:grid-cols-2 gap-6 mb-8 list-none p-0 m-0" aria-label="Canales principales">
-          {PRIMARY_CHANNELS.map((channel) => (
-            <li key={channel.id} className="flex">
-              <motion.a
-                href={channel.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                id={`channel-${channel.id}`}
-                className="w-full p-7 sm:p-8 rounded-2xl bg-surface-subtle border-2 border-navy/10 hover:border-brand-blue-dark transition-all duration-300 flex flex-col justify-between group no-underline shadow-sm"
-                aria-label={`${channel.label} — ${channel.description}`}
+        {/* Tier 1: Two Featured Primary Channels (Meetup & WhatsApp) */}
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
+          {/* Meetup Card */}
+          <div className="p-7 sm:p-8 rounded-2xl bg-navy-card/95 border border-brand-blue/30 flex flex-col justify-between group shadow-xl">
+            <div>
+              <div className="flex items-center justify-between mb-6">
+                <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-white">
+                  <MeetupIcon className="w-6 h-6" />
+                </div>
+                <span className="text-xs font-semibold uppercase tracking-wider text-brand-blue bg-brand-blue/10 px-2.5 py-1 rounded-md border border-brand-blue/20">
+                  Calendario oficial
+                </span>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-3">
+                Actividades en Meetup
+              </h3>
+              <p className="text-muted-dark text-sm sm:text-base leading-relaxed mb-6">
+                En Meetup publicamos las fechas, temas y modalidades (presenciales en el campus de la
+                UTP o virtuales) de cada sesión. Regístrate en la plataforma para asegurar tu
+                asistencia y recibir recordatorios.
+              </p>
+            </div>
+
+            <div className="pt-5 border-t border-white/8">
+              <CtaButton
+                href={SOCIAL_LINKS.meetup}
+                variant="primary"
+                icon={ArrowUpRight}
+                id="channel-meetup"
               >
-                <div>
-                  <div className="flex items-center justify-between mb-5">
-                    <div className="w-12 h-12 rounded-xl bg-white border border-navy/10 flex items-center justify-center text-navy group-hover:text-brand-blue-dark transition-colors duration-200 shadow-sm">
-                      {channel.icon}
-                    </div>
-                    <span className="text-[11px] font-mono font-bold tracking-wider uppercase text-brand-blue-dark bg-brand-blue-dark/10 px-2.5 py-1 rounded border border-brand-blue-dark/20">
-                      {channel.tag}
-                    </span>
-                  </div>
-                  <h3 className="text-2xl font-bold text-navy mb-2.5 group-hover:text-brand-blue-dark transition-colors">
-                    {channel.label}
-                  </h3>
-                  <p className="text-muted-light text-sm sm:text-base leading-relaxed mb-6">
-                    {channel.description}
-                  </p>
-                </div>
+                Ver actividades en Meetup
+              </CtaButton>
+            </div>
+          </div>
 
-                <div className="pt-4 border-t border-navy/8 flex items-center justify-between text-sm font-semibold text-brand-blue-dark">
-                  <span>{channel.actionText}</span>
-                  <ArrowUpRight size={18} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" aria-hidden="true" />
+          {/* WhatsApp Card */}
+          <div className="p-7 sm:p-8 rounded-2xl bg-navy-card/95 border border-white/10 flex flex-col justify-between group shadow-xl">
+            <div>
+              <div className="flex items-center justify-between mb-6">
+                <div className="w-12 h-12 rounded-xl bg-[#25D366]/15 flex items-center justify-center text-[#25D366]">
+                  <WhatsAppIcon className="w-6 h-6" />
                 </div>
-              </motion.a>
-            </li>
-          ))}
-        </ul>
+                <span className="text-xs font-semibold uppercase tracking-wider text-[#25D366] bg-[#25D366]/10 px-2.5 py-1 rounded-md border border-[#25D366]/20">
+                  Grupo de chat
+                </span>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-3">
+                Comunidad en WhatsApp
+              </h3>
+              <p className="text-muted-dark text-sm sm:text-base leading-relaxed mb-6">
+                El grupo de mensajería para hacer preguntas técnicas, compartir noticias y recursos
+                sobre cloud, y coordinar con el equipo antes y después de cada encuentro.
+              </p>
+            </div>
 
-        {/* Tier 2: Secondary Resource Platforms */}
-        <ul className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 list-none p-0 m-0" aria-label="Plataformas de recursos">
-          {SECONDARY_CHANNELS.map((channel) => (
-            <li key={channel.id} className="flex">
-              <motion.a
-                href={channel.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                id={`channel-${channel.id}`}
-                className="w-full p-5 rounded-xl bg-white border border-navy/10 hover:border-brand-blue-dark/50 transition-all duration-200 flex flex-col justify-between group no-underline"
-                aria-label={`${channel.label} — ${channel.description}`}
+            <div className="pt-5 border-t border-white/8">
+              <CtaButton
+                href={SOCIAL_LINKS.whatsapp}
+                variant="outline-white"
+                icon={ArrowUpRight}
+                id="channel-whatsapp"
               >
-                <div>
-                  <div className="flex items-center justify-between mb-3.5">
-                    <span className="text-muted-light group-hover:text-brand-blue-dark group-focus-visible:text-brand-blue-dark transition-colors duration-200">
-                      {channel.icon}
-                    </span>
-                    <span className="text-[10px] font-mono font-bold tracking-wider uppercase text-muted-light">
-                      {channel.tag}
-                    </span>
-                  </div>
-                  <h4 className="font-bold text-navy text-base mb-1.5 group-hover:text-brand-blue-dark transition-colors">
-                    {channel.label}
-                  </h4>
-                  <p className="text-muted-light text-xs leading-relaxed mb-4">
-                    {channel.description}
-                  </p>
-                </div>
+                Unirse al grupo de WhatsApp
+              </CtaButton>
+            </div>
+          </div>
+        </div>
 
-                <div className="flex items-center justify-between pt-3 border-t border-navy/6 text-xs font-mono font-semibold text-brand-blue-dark">
-                  <span>{channel.actionText}</span>
-                  <ArrowUpRight size={13} aria-hidden="true" />
-                </div>
-              </motion.a>
-            </li>
-          ))}
-        </ul>
+        {/* Tier 2: Secondary Platforms */}
+        <motion.div
+          variants={staggerVariants}
+          initial="hidden"
+          animate={isInView ? 'visible' : 'hidden'}
+          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4"
+        >
+          {/* GitHub */}
+          <a
+            href={SOCIAL_LINKS.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-5 rounded-xl bg-navy-card/80 border border-white/8 hover:border-brand-blue/40 transition-all flex flex-col justify-between group no-underline"
+          >
+            <div>
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-white/70 group-hover:text-brand-blue transition-colors">
+                  <GitHubIcon className="w-5 h-5" />
+                </span>
+                <span className="text-[10px] font-mono uppercase tracking-wider text-muted-dark">
+                  Código
+                </span>
+              </div>
+              <h4 className="font-bold text-white text-base mb-1 group-hover:text-brand-blue transition-colors">
+                GitHub
+              </h4>
+              <p className="text-muted-dark text-xs leading-relaxed">
+                Repositorios y recursos técnicos de los talleres.
+              </p>
+            </div>
+            <div className="flex items-center justify-between pt-3 mt-4 border-t border-white/8 text-xs font-semibold text-brand-blue">
+              <span>Ver GitHub</span>
+              <ArrowUpRight size={13} aria-hidden="true" />
+            </div>
+          </a>
+
+          {/* Instagram */}
+          <a
+            href={SOCIAL_LINKS.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-5 rounded-xl bg-navy-card/80 border border-white/8 hover:border-brand-blue/40 transition-all flex flex-col justify-between group no-underline"
+          >
+            <div>
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-white/70 group-hover:text-brand-blue transition-colors">
+                  <InstagramIcon className="w-5 h-5" />
+                </span>
+                <span className="text-[10px] font-mono uppercase tracking-wider text-muted-dark">
+                  Social
+                </span>
+              </div>
+              <h4 className="font-bold text-white text-base mb-1 group-hover:text-brand-blue transition-colors">
+                Instagram
+              </h4>
+              <p className="text-muted-dark text-xs leading-relaxed">
+                Avisos, resúmenes visuales y novedades del grupo.
+              </p>
+            </div>
+            <div className="flex items-center justify-between pt-3 mt-4 border-t border-white/8 text-xs font-semibold text-brand-blue">
+              <span>Ver perfil</span>
+              <ArrowUpRight size={13} aria-hidden="true" />
+            </div>
+          </a>
+
+          {/* YouTube */}
+          <a
+            href={SOCIAL_LINKS.youtube}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-5 rounded-xl bg-navy-card/80 border border-white/8 hover:border-brand-blue/40 transition-all flex flex-col justify-between group no-underline"
+          >
+            <div>
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-white/70 group-hover:text-brand-blue transition-colors">
+                  <YouTubeIcon className="w-5 h-5" />
+                </span>
+                <span className="text-[10px] font-mono uppercase tracking-wider text-muted-dark">
+                  Video
+                </span>
+              </div>
+              <h4 className="font-bold text-white text-base mb-1 group-hover:text-brand-blue transition-colors">
+                YouTube
+              </h4>
+              <p className="text-muted-dark text-xs leading-relaxed">
+                Sesiones grabadas y material audiovisual técnico.
+              </p>
+            </div>
+            <div className="flex items-center justify-between pt-3 mt-4 border-t border-white/8 text-xs font-semibold text-brand-blue">
+              <span>Ver canal</span>
+              <ArrowUpRight size={13} aria-hidden="true" />
+            </div>
+          </a>
+
+          {/* LinkedIn */}
+          <a
+            href={SOCIAL_LINKS.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-5 rounded-xl bg-navy-card/80 border border-white/8 hover:border-brand-blue/40 transition-all flex flex-col justify-between group no-underline"
+          >
+            <div>
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-white/70 group-hover:text-brand-blue transition-colors">
+                  <LinkedInIcon className="w-5 h-5" />
+                </span>
+                <span className="text-[10px] font-mono uppercase tracking-wider text-muted-dark">
+                  Profesional
+                </span>
+              </div>
+              <h4 className="font-bold text-white text-base mb-1 group-hover:text-brand-blue transition-colors">
+                LinkedIn
+              </h4>
+              <p className="text-muted-dark text-xs leading-relaxed">
+                Página oficial para presencia y networking.
+              </p>
+            </div>
+            <div className="flex items-center justify-between pt-3 mt-4 border-t border-white/8 text-xs font-semibold text-brand-blue">
+              <span>Ver página</span>
+              <ArrowUpRight size={13} aria-hidden="true" />
+            </div>
+          </a>
+        </motion.div>
+
+        {/* Contact Strip */}
+        <div className="mt-8 pt-6 border-t border-white/8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-dark">
+          <span className="flex items-center gap-2">
+            <Mail size={14} className="text-brand-blue" aria-hidden="true" />
+            <span>Contacto directo:</span>
+            <a href={`mailto:${SOCIAL_LINKS.email}`} className="text-white hover:text-brand-blue underline">
+              {SOCIAL_LINKS.email}
+            </a>
+          </span>
+          <span>Pereira, Risaralda • Universidad Tecnológica de Pereira</span>
+        </div>
       </div>
     </section>
   )

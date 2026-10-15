@@ -3,7 +3,6 @@ import Hero from './components/Hero'
 import About from './components/About'
 import WhatWeDo from './components/WhatWeDo'
 import LearningPath from './components/LearningPath'
-import Events from './components/Events'
 import Community from './components/Community'
 import Team from './components/Team'
 import FAQ from './components/FAQ'
@@ -28,7 +27,6 @@ export default function App() {
         <About />
         <WhatWeDo />
         <LearningPath />
-        <Events />
         <Community />
         <Team />
         <FAQ />

@@ -40,16 +40,17 @@ export default function Team() {
           className="mb-12 lg:mb-16"
         >
           <div className="mb-4">
-            <SectionTag label="06 // EQUIPO LÍDER" />
+            <SectionTag label="EQUIPO LÍDER" />
           </div>
           <h2
             id="equipo-heading"
-            className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight tracking-tight mb-4"
+            className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight tracking-tight text-balance mb-4"
           >
-            Equipo que lidera y gestiona
+            Estudiantes a cargo de la gestión
           </h2>
-          <p className="text-muted-dark text-base sm:text-lg max-w-2xl leading-relaxed">
-            Estudiantes de la UTP que coordinan las actividades, proyectos y encuentros de la comunidad.
+          <p className="text-muted-dark text-base sm:text-lg max-w-2xl leading-relaxed text-pretty">
+            Integrantes de la Universidad Tecnológica de Pereira que coordinan los talleres, la
+            logística y las comunicaciones de la comunidad durante el periodo actual.
           </p>
         </motion.div>
 
