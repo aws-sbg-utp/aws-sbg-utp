@@ -29,7 +29,7 @@ export default function About() {
                 decoding="async"
               />
               <div className="text-xs text-muted-light leading-snug">
-                <span className="font-bold text-navy text-sm block mb-1">Capítulo UTP</span>
+                <span className="font-bold text-navy text-sm block mb-1">Comunidad UTP</span>
                 Comunidad de estudiantes en la Universidad Tecnológica de Pereira.
               </div>
             </div>

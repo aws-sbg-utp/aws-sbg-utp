@@ -115,7 +115,7 @@ export default function Hero() {
                   />
                   <div>
                     <span className="font-bold text-white text-base block leading-tight">
-                      Capítulo UTP
+                      Comunidad UTP
                     </span>
                     <span className="text-xs text-muted-dark flex items-center gap-1 mt-0.5">
                       <MapPin size={12} className="text-brand-blue" aria-hidden="true" />
