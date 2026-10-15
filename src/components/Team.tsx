@@ -46,11 +46,11 @@ export default function Team() {
             id="equipo-heading"
             className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight tracking-tight text-balance mb-4"
           >
-            Estudiantes a cargo de la gestión
+            Quiénes estamos detrás del grupo
           </h2>
           <p className="text-muted-dark text-base sm:text-lg max-w-2xl leading-relaxed text-pretty">
-            Integrantes de la Universidad Tecnológica de Pereira que coordinan los talleres, la
-            logística y las comunicaciones de la comunidad durante el periodo actual.
+            Somos el equipo de estudiantes de la UTP encargado de organizar los talleres, preparar
+            las demos y coordinar la comunidad.
           </p>
         </motion.div>
 

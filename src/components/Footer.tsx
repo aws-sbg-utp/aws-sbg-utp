@@ -20,9 +20,9 @@ const SOCIAL_ITEMS: SocialItem[] = [
 
 const FOOTER_LINKS = [
   { label: 'Sobre el grupo', href: '#sobre-el-grupo' },
-  { label: 'Dinámica', href: '#dinamica' },
-  { label: 'Cómo participar', href: '#como-participar' },
-  { label: 'Encuentros', href: '#encuentros' },
+  { label: 'Qué hacemos', href: '#que-hacemos' },
+  { label: 'Cómo unirte', href: '#como-unirte' },
+  { label: 'Canales', href: '#canales' },
   { label: 'Equipo', href: '#equipo' },
   { label: 'Preguntas frecuentes', href: '#faq' },
 ]
@@ -50,8 +50,8 @@ export default function Footer() {
               />
             </div>
             <p className="text-muted-dark text-sm leading-relaxed max-w-xs mb-1">
-              Comunidad de estudiantes de la Universidad Tecnológica de Pereira orientada al
-              aprendizaje y práctica de computación en la nube con Amazon Web Services.
+              Comunidad de estudiantes de la Universidad Tecnológica de Pereira para aprender y
+              practicar computación en la nube con Amazon Web Services.
             </p>
 
             {/* Email */}

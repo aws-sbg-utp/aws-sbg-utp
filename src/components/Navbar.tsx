@@ -108,7 +108,7 @@ export default function Navbar() {
                 icon={ArrowUpRight}
                 id="nav-cta-desktop"
               >
-                Próximas actividades
+                Próximos eventos
               </CtaButton>
             </div>
 

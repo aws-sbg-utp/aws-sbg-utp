@@ -15,7 +15,7 @@ export default function About() {
               <SectionTag label="SOBRE LA COMUNIDAD" variant="light" />
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-navy leading-[1.12] tracking-tight text-balance mb-8">
-              Una iniciativa estudiantil para aprender cloud juntos
+              Un espacio estudiantil para aprender cloud juntos
             </h2>
 
             {/* Official UTP institutional seal card */}
@@ -39,16 +39,15 @@ export default function About() {
           <div className="space-y-6 lg:pt-2">
             <p className="text-navy text-lg sm:text-xl font-normal leading-relaxed text-pretty">
               El <strong className="font-bold">AWS Student Builder Group UTP</strong> reúne a estudiantes
-              interesados en entender cómo funciona la nube en la práctica. No somos un curso formal
-              ni una asignatura académica: nos organizamos de manera colaborativa para estudiar
-              conceptos, preparar actividades técnicas y ayudarnos mutuamente a avanzar.
+              que quieren entender cómo funciona la nube en el mundo real. No somos una materia más ni
+              un curso tradicional: nos organizamos entre estudiantes para aprender conceptos, hacer
+              talleres prácticos y ayudarnos entre todos a avanzar.
             </p>
 
             <p className="text-muted-light text-base sm:text-lg font-normal leading-relaxed text-pretty">
-              La comunidad está abierta a toda la comunidad estudiantil de la Universidad
-              Tecnológica de Pereira, sin importar si estás en tus primeros semestres o cursando
-              materias avanzadas, y sin requerir conocimientos técnicos previos sobre Amazon Web
-              Services.
+              El grupo está abierto a cualquier estudiante de la UTP, sin importar la carrera, si estás
+              en primeros semestres o terminando la universidad, y sin necesidad de tener conocimientos
+              previos sobre Amazon Web Services.
             </p>
 
             {/* AWS endorsement note */}
@@ -62,9 +61,9 @@ export default function About() {
                 decoding="async"
               />
               <p>
-                AWS Student Builder Groups es un programa de Amazon Web Services que apoya a
-                comunidades impulsadas por estudiantes en distintas universidades del mundo,
-                facilitando recursos y conexión con el ecosistema cloud.
+                Contamos con el respaldo de AWS Student Builder Groups, el programa oficial de
+                Amazon Web Services que apoya a comunidades universitarias en todo el mundo con
+                recursos, guías y beneficios para estudiantes.
               </p>
             </div>
           </div>

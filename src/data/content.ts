@@ -12,9 +12,9 @@ export const SOCIAL_LINKS = {
 // Nav items
 export const NAV_ITEMS = [
   { label: 'Sobre el grupo', href: '#sobre-el-grupo' },
-  { label: 'Dinámica', href: '#dinamica' },
-  { label: 'Cómo participar', href: '#como-participar' },
-  { label: 'Encuentros', href: '#encuentros' },
+  { label: 'Qué hacemos', href: '#que-hacemos' },
+  { label: 'Cómo unirte', href: '#como-unirte' },
+  { label: 'Canales', href: '#canales' },
   { label: 'Equipo', href: '#equipo' },
   { label: 'Preguntas', href: '#faq' },
 ] as const
@@ -37,12 +37,12 @@ export interface WhatWeDoBlock {
 
 export const WHAT_WE_DO_BLOCKS: WhatWeDoBlock[] = [
   {
-    id: 'fundamentos',
+    id: 'conceptos',
     step: '01',
     badge: 'Conceptos',
-    title: 'Sesiones de conceptos y fundamentos',
+    title: 'Conceptos y bases desde cero',
     description:
-      'Revisamos los principios esenciales de computación en la nube: arquitectura básica, servicios de almacenamiento, redes, cómputo y seguridad en AWS.',
+      'Explicamos los fundamentos de la nube de forma clara: cómo funciona la infraestructura, servidores, almacenamiento, redes y seguridad en AWS.',
     iconSrc: '/assets/icons/ladder-icons/ladder-icon-blue.svg',
     iconAlt: 'Fundamentos cloud',
     accentColor: '#44b4ff',
@@ -50,17 +50,17 @@ export const WHAT_WE_DO_BLOCKS: WhatWeDoBlock[] = [
     borderColor: 'border-brand-blue/25',
     hoverBorderColor: 'hover:border-brand-blue/50',
     bullets: [
-      'Explicaciones paso a paso orientadas a principiantes',
-      'Revisión de casos de uso y ejemplos de arquitectura',
+      'Explicaciones paso a paso pensadas para quienes están empezando',
+      'Ejemplos reales de cómo se usan estos servicios en las aplicaciones actuales',
     ],
   },
   {
-    id: 'practica',
+    id: 'laboratorios',
     step: '02',
     badge: 'Laboratorios',
-    title: 'Laboratorios y práctica guiada',
+    title: 'Talleres y demos en vivo',
     description:
-      'Desarrollamos ejercicios prácticos para interactuar con la consola y las herramientas de AWS, comprendiendo cómo desplegar y configurar servicios.',
+      'No nos quedamos solo en la teoría. Hacemos ejercicios prácticos directamente en la consola de AWS para aprender a configurar y desplegar servicios paso a paso.',
     iconSrc: '/assets/icons/bolt-icons/bolt-icon-blue.svg',
     iconAlt: 'Práctica guiada',
     accentColor: '#ff9900',
@@ -68,31 +68,31 @@ export const WHAT_WE_DO_BLOCKS: WhatWeDoBlock[] = [
     borderColor: 'border-brand-orange/25',
     hoverBorderColor: 'hover:border-brand-orange/50',
     bullets: [
-      'Práctica directa con servicios fundamentales',
-      'Enfoque en resolución de problemas técnicos',
+      'Práctica directa con los servicios más usados de AWS',
+      'Enfoque en crear proyectos funcionales desde cero',
     ],
   },
   {
     id: 'comunidad',
     step: '03',
     badge: 'Comunidad',
-    title: 'Espacios de comunidad y encuentro',
+    title: 'Comunidad y crecimiento',
     description:
-      'Compartimos experiencias académicas, resolvemos dudas técnicas entre compañeros y conversamos sobre tecnologías cloud y desarrollo profesional.',
+      'Un espacio para hacer preguntas con confianza, compartir recursos de estudio, prepararnos para certificaciones oficiales y conocer gente de otras carreras.',
     iconSrc: '/assets/icons/team-icons/team-icon-blue.svg',
-    iconAlt: 'Espacios de encuentro',
+    iconAlt: 'Comunidad y crecimiento',
     accentColor: '#03e582',
     badgeBg: 'text-brand-green bg-brand-green/10 border-brand-green/20',
     borderColor: 'border-brand-green/25',
     hoverBorderColor: 'hover:border-brand-green/50',
     bullets: [
-      'Aprendizaje colaborativo entre pares',
-      'Conexión entre estudiantes de distintas carreras',
+      'Apoyo entre compañeros para estudiar y resolver dudas técnicas',
+      'Guías para aprovechar plataformas gratuitas como AWS Builder Center',
     ],
   },
 ]
 
-// How to join steps (replaces old abstract learning path)
+// How to join steps (Guía de nuevos integrantes)
 export interface PathStep {
   step: string
   label: string
@@ -106,29 +106,29 @@ export interface PathStep {
 export const HOW_TO_JOIN_STEPS: PathStep[] = [
   {
     step: '01',
-    label: 'Entra al chat de WhatsApp',
+    label: 'Entra al grupo de WhatsApp',
     description:
-      'Es nuestro canal principal de contacto diario. Preséntate, conoce a otros integrantes y recibe avisos sobre las próximas convocatorias.',
+      'Es nuestro canal principal del día a día. Ahí avisamos de los próximos talleres, compartimos recursos y resolvemos dudas rápidas.',
     iconSrc: '/assets/icons/team-icons/team-icon-white.svg',
     iconAlt: 'WhatsApp comunidad',
-    actionLabel: 'Ir al chat de WhatsApp',
+    actionLabel: 'Ir al grupo de WhatsApp →',
     actionHref: SOCIAL_LINKS.whatsapp,
   },
   {
     step: '02',
-    label: 'Sigue la página de Meetup',
+    label: 'Únete a la página de Meetup',
     description:
-      'Allí publicamos la agenda oficial de cada actividad, con los detalles de formato (presencial o virtual) y la confirmación de asistencia.',
+      'Allí publicamos el calendario oficial de cada charla o taller (virtual o presencial) para que puedas registrarte y separar tu cupo.',
     iconSrc: '/assets/icons/speaker-icons/speaker-icon-white.svg',
     iconAlt: 'Meetup oficial',
-    actionLabel: 'Ver grupo en Meetup',
+    actionLabel: 'Ver grupo en Meetup →',
     actionHref: SOCIAL_LINKS.meetup,
   },
   {
     step: '03',
-    label: 'Asiste a tu primera sesión',
+    label: 'Conéctate a tu primera sesión',
     description:
-      'Ven a compartir con el grupo en el campus o conéctate a las sesiones remotas. Solo necesitas interés por aprender y curiosidad tecnológica.',
+      'Asiste a las sesiones virtuales o acompáñanos cuando hagamos actividades en el campus. Solo necesitas ganas de aprender.',
     iconSrc: '/assets/icons/trophy-icons/trophy-icon-white.svg',
     iconAlt: 'Primera sesión',
     actionLabel: 'Abierto a estudiantes UTP',
@@ -150,31 +150,31 @@ export const FAQ_ITEMS: FaqItem[] = [
     id: 'costo',
     question: '¿Participar en la comunidad tiene algún costo?',
     answer:
-      'Asistir a las actividades, talleres y encuentros organizados por el AWS Student Builder Group UTP no tiene ningún costo. La participación es completamente libre para los estudiantes.',
+      'Para nada. Todas las charlas, talleres y actividades que organizamos en el AWS Student Builder Group UTP son 100% gratuitos.',
   },
   {
     id: 'cobros-aws',
     question: '¿Se generan cobros al usar Amazon Web Services?',
     answer:
-      'Para participar en las explicaciones y actividades guiadas no necesitas una cuenta de AWS ni registrar medios de pago. Si de manera voluntaria decides abrir una cuenta personal de AWS para experimentar por tu cuenta, ten en cuenta que ciertos servicios pueden generar facturación directa de Amazon Web Services si superas los límites de la capa gratuita (AWS Free Tier).',
+      'Para asistir a las sesiones y seguir nuestras demos no necesitas tener una cuenta de AWS ni registrar tarjeta de crédito; además, te enseñaremos a usar recursos gratuitos para estudiantes como AWS Builder Center. Si decides crear una cuenta personal por tu cuenta para practicar, solo debes tener cuidado de mantenerte dentro de los límites de la capa gratuita (AWS Free Tier) para que no te generen cobros.',
   },
   {
     id: 'experiencia',
     question: '¿Necesito experiencia previa en computación en la nube?',
     answer:
-      'No. La comunidad está pensada como un punto de partida. Gran parte de nuestras actividades cubren fundamentos desde cero, por lo que no es necesario haber utilizado AWS antes.',
+      'No. El grupo está pensado justamente para aprender desde cero. En las sesiones explicamos los conceptos básicos paso a paso, así que no importa si nunca has usado AWS.',
   },
   {
     id: 'carrera',
-    question: '¿Debo pertenecer al programa de Ingeniería de Sistemas y Computación?',
+    question: '¿Debo ser estudiante de Ingeniería de Sistemas y Computación?',
     answer:
-      'No es un requisito. La comunidad está abierta a cualquier estudiante activo de la Universidad Tecnológica de Pereira, sin importar la carrera, facultad o semestre que esté cursando.',
+      'No es requisito. Aunque la iniciativa nació en Sistemas, la comunidad está abierta a estudiantes de cualquier carrera, facultad o semestre de la UTP que quieran aprender sobre nube, datos o inteligencia artificial.',
   },
   {
     id: 'eventos',
-    question: '¿Dónde se anuncian las fechas y lugares de los encuentros?',
+    question: '¿Dónde se anuncian las fechas y enlaces de los encuentros?',
     answer:
-      'Publicamos la programación oficial a través de nuestra página en Meetup y compartimos los recordatorios en el grupo de WhatsApp. Las actividades se realizan en modalidades presenciales en el campus de la UTP o en sesiones virtuales.',
+      'Publicamos toda la programación oficial en nuestra página de Meetup y enviamos los avisos por el grupo de WhatsApp e Instagram. Hacemos sesiones virtuales y, más adelante, también tendremos talleres presenciales en el campus.',
   },
 ]
 

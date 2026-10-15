@@ -50,7 +50,7 @@ export default function Hero() {
               {...fadeUp(0.18)}
               className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.08] tracking-tight mb-6 text-balance max-w-2xl"
             >
-              Computación en la nube desde el campus universitario.
+              Computación en la nube por y para estudiantes de la UTP.
             </motion.h1>
 
             {/* Subtext */}
@@ -59,9 +59,9 @@ export default function Hero() {
               className="text-muted-dark text-lg sm:text-xl leading-relaxed mb-8 max-w-xl text-pretty"
             >
               Somos el AWS Student Builder Group de la Universidad Tecnológica de Pereira: un
-              espacio abierto para estudiantes de cualquier programa que quieren aprender sobre
-              arquitectura cloud, experimentar con servicios de AWS y compartir proyectos en
-              comunidad.
+              espacio abierto para estudiantes de cualquier carrera que quieran aprender cómo
+              funciona la nube, probar los servicios de AWS en la práctica y crear proyectos
+              juntos.
             </motion.p>
 
             {/* CTAs — Meetup primary, WhatsApp secondary */}
@@ -75,7 +75,7 @@ export default function Hero() {
                 icon={ArrowUpRight}
                 id="hero-cta-meetup"
               >
-                Ver actividades en Meetup
+                Ver eventos en Meetup
               </CtaButton>
               <CtaButton
                 href={SOCIAL_LINKS.whatsapp}
@@ -149,15 +149,15 @@ export default function Hero() {
                   <Users size={16} className="text-brand-orange mt-0.5 flex-shrink-0" aria-hidden="true" />
                   <div>
                     <strong className="text-white font-medium block">Participación</strong>
-                    <span>Abierta a estudiantes de todas las facultades y semestres</span>
+                    <span>Abierta a estudiantes de todas las carreras y semestres</span>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <Sparkles size={16} className="text-brand-green mt-0.5 flex-shrink-0" aria-hidden="true" />
                   <div>
-                    <strong className="text-white font-medium block">Modalidad de actividades</strong>
-                    <span>Encuentros presenciales en campus y sesiones virtuales</span>
+                    <strong className="text-white font-medium block">Modalidad</strong>
+                    <span>Sesiones virtuales y talleres presenciales en el campus</span>
                   </div>
                 </div>
               </div>
@@ -165,16 +165,16 @@ export default function Hero() {
               {/* Transparent metrics strip */}
               <div className="mt-6 pt-5 border-t border-white/8 grid grid-cols-3 gap-2 text-center">
                 <div className="bg-white/5 rounded-lg py-2.5 px-2">
-                  <span className="text-xs font-bold text-white block">100% Libre</span>
+                  <span className="text-xs font-bold text-white block">100% Gratis</span>
                   <span className="text-[11px] text-muted-dark">Sin costo</span>
                 </div>
                 <div className="bg-white/5 rounded-lg py-2.5 px-2">
                   <span className="text-xs font-bold text-white block">Desde cero</span>
-                  <span className="text-[11px] text-muted-dark">Sin requisitos</span>
+                  <span className="text-[11px] text-muted-dark">Sin experiencia previa</span>
                 </div>
                 <div className="bg-white/5 rounded-lg py-2.5 px-2">
-                  <span className="text-xs font-bold text-white block">Entre pares</span>
-                  <span className="text-[11px] text-muted-dark">Colaborativo</span>
+                  <span className="text-xs font-bold text-white block">En comunidad</span>
+                  <span className="text-[11px] text-muted-dark">De estudiante a estudiante</span>
                 </div>
               </div>
             </motion.div>

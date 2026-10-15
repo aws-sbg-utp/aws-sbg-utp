@@ -35,12 +35,12 @@ export default function FinalCTA() {
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-[1.12] tracking-tight text-balance mb-5">
-            Conéctate al próximo encuentro
+            Te esperamos en el próximo evento
           </h2>
 
           <p className="text-muted-dark text-base sm:text-lg mb-10 max-w-lg mx-auto leading-relaxed text-pretty">
-            Únete al grupo de WhatsApp para conocer las novedades o consulta en Meetup las sesiones
-            programadas. La comunidad está abierta para ti.
+            Entra al grupo de WhatsApp para estar al día con los anuncios o revisa en Meetup cuál
+            es nuestro próximo taller para inscribirte.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3.5 justify-center mb-8">
@@ -50,7 +50,7 @@ export default function FinalCTA() {
               icon={ArrowUpRight}
               id="final-cta-meetup"
             >
-              Consultar eventos en Meetup
+              Ver eventos en Meetup
             </CtaButton>
             <CtaButton
               href={SOCIAL_LINKS.whatsapp}

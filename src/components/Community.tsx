@@ -68,9 +68,9 @@ export default function Community() {
   return (
     <section
       ref={ref}
-      id="encuentros"
+      id="canales"
       className="section-padding bg-navy border-t border-white/8"
-      aria-labelledby="encuentros-heading"
+      aria-labelledby="canales-heading"
     >
       <div className="container-base">
         {/* Header */}
@@ -81,17 +81,17 @@ export default function Community() {
           className="mb-12 lg:mb-16"
         >
           <div className="mb-4">
-            <SectionTag label="ENCUENTROS Y COMUNICACIÓN" />
+            <SectionTag label="CANALES Y EVENTOS" />
           </div>
           <h2
-            id="encuentros-heading"
+            id="canales-heading"
             className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight tracking-tight text-balance mb-4"
           >
-            Dónde nos encontramos
+            Dónde encontrarnos
           </h2>
           <p className="text-muted-dark text-base sm:text-lg max-w-xl leading-relaxed text-pretty">
-            Organizamos actividades periódicas y mantenemos canales abiertos para que puedas
-            comunicarte con el grupo en cualquier momento.
+            Únete a nuestros canales oficiales para enterarte de los próximos eventos, revisar el
+            código de los talleres y hablar con el grupo.
           </p>
         </motion.div>
 
@@ -105,16 +105,15 @@ export default function Community() {
                   <MeetupIcon className="w-6 h-6" />
                 </div>
                 <span className="text-xs font-semibold uppercase tracking-wider text-brand-blue bg-brand-blue/10 px-2.5 py-1 rounded-md border border-brand-blue/20">
-                  Calendario oficial
+                  Calendario de eventos
                 </span>
               </div>
               <h3 className="text-2xl font-bold text-white mb-3">
-                Actividades en Meetup
+                Eventos en Meetup
               </h3>
               <p className="text-muted-dark text-sm sm:text-base leading-relaxed mb-6">
-                En Meetup publicamos las fechas, temas y modalidades (presenciales en el campus de la
-                UTP o virtuales) de cada sesión. Regístrate en la plataforma para asegurar tu
-                asistencia y recibir recordatorios.
+                En Meetup publicamos las fechas, temas y enlaces de conexión de cada sesión. Únete
+                al grupo en la plataforma para inscribirte a los talleres y recibir recordatorios.
               </p>
             </div>
 
@@ -125,7 +124,7 @@ export default function Community() {
                 icon={ArrowUpRight}
                 id="channel-meetup"
               >
-                Ver actividades en Meetup
+                Ver eventos en Meetup
               </CtaButton>
             </div>
           </div>
@@ -138,15 +137,15 @@ export default function Community() {
                   <WhatsAppIcon className="w-6 h-6" />
                 </div>
                 <span className="text-xs font-semibold uppercase tracking-wider text-[#25D366] bg-[#25D366]/10 px-2.5 py-1 rounded-md border border-[#25D366]/20">
-                  Grupo de chat
+                  Chat de la comunidad
                 </span>
               </div>
               <h3 className="text-2xl font-bold text-white mb-3">
-                Comunidad en WhatsApp
+                Grupo de WhatsApp
               </h3>
               <p className="text-muted-dark text-sm sm:text-base leading-relaxed mb-6">
-                El grupo de mensajería para hacer preguntas técnicas, compartir noticias y recursos
-                sobre cloud, y coordinar con el equipo antes y después de cada encuentro.
+                Nuestro chat para hacer preguntas técnicas, compartir noticias o recursos de
+                tecnología y hablar con el equipo antes y después de cada evento.
               </p>
             </div>
 
@@ -190,7 +189,7 @@ export default function Community() {
                 GitHub
               </h4>
               <p className="text-muted-dark text-xs leading-relaxed">
-                Repositorios y recursos técnicos de los talleres.
+                Repositorios, guías y código que usamos en las demos.
               </p>
             </div>
             <div className="flex items-center justify-between pt-3 mt-4 border-t border-white/8 text-xs font-semibold text-brand-blue">
@@ -219,7 +218,7 @@ export default function Community() {
                 Instagram
               </h4>
               <p className="text-muted-dark text-xs leading-relaxed">
-                Avisos, resúmenes visuales y novedades del grupo.
+                Anuncios de eventos, fotos y novedades del grupo.
               </p>
             </div>
             <div className="flex items-center justify-between pt-3 mt-4 border-t border-white/8 text-xs font-semibold text-brand-blue">
@@ -248,7 +247,7 @@ export default function Community() {
                 YouTube
               </h4>
               <p className="text-muted-dark text-xs leading-relaxed">
-                Sesiones grabadas y material audiovisual técnico.
+                Grabaciones de las charlas y talleres por si te perdiste alguno.
               </p>
             </div>
             <div className="flex items-center justify-between pt-3 mt-4 border-t border-white/8 text-xs font-semibold text-brand-blue">
@@ -277,7 +276,7 @@ export default function Community() {
                 LinkedIn
               </h4>
               <p className="text-muted-dark text-xs leading-relaxed">
-                Página oficial para presencia y networking.
+                Página oficial para conectar y compartir lo que hacemos.
               </p>
             </div>
             <div className="flex items-center justify-between pt-3 mt-4 border-t border-white/8 text-xs font-semibold text-brand-blue">

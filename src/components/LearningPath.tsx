@@ -24,9 +24,9 @@ export default function LearningPath() {
   return (
     <section
       ref={ref}
-      id="como-participar"
+      id="como-unirte"
       className="section-padding bg-surface-subtle border-t border-navy/6"
-      aria-labelledby="participar-heading"
+      aria-labelledby="como-unirte-heading"
     >
       <div className="container-base">
         {/* Header */}
@@ -40,14 +40,14 @@ export default function LearningPath() {
             <SectionTag label="PRIMEROS PASOS" variant="light" />
           </div>
           <h2
-            id="participar-heading"
+            id="como-unirte-heading"
             className="text-3xl sm:text-4xl lg:text-5xl font-black text-navy leading-tight tracking-tight text-balance mb-4"
           >
             Cómo sumarte a la comunidad
           </h2>
           <p className="text-muted-light text-base sm:text-lg max-w-xl leading-relaxed text-pretty">
-            Si quieres participar en las actividades, no necesitas postularte formalmente ni cumplir
-            requisitos previos. Puedes integrarte siguiendo estos tres pasos:
+            Para participar no necesitas inscripciones complicadas ni cumplir requisitos previos.
+            Solo sigue estos tres pasos:
           </p>
         </motion.div>
 

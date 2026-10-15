@@ -23,9 +23,9 @@ export default function WhatWeDo() {
   return (
     <section
       ref={ref}
-      id="dinamica"
+      id="que-hacemos"
       className="section-padding bg-white border-t border-navy/6"
-      aria-labelledby="dinamica-heading"
+      aria-labelledby="que-hacemos-heading"
     >
       <div className="container-base">
         {/* Header */}
@@ -36,17 +36,17 @@ export default function WhatWeDo() {
           className="mb-12 lg:mb-16"
         >
           <div className="mb-4">
-            <SectionTag label="DINÁMICA DE APRENDIZAJE" variant="light" />
+            <SectionTag label="QUÉ HACEMOS" variant="light" />
           </div>
           <h2
-            id="dinamica-heading"
+            id="que-hacemos-heading"
             className="text-3xl sm:text-4xl lg:text-5xl font-black text-navy leading-tight tracking-tight text-balance mb-4"
           >
-            Cómo aprendemos y colaboramos
+            Cómo aprendemos en el grupo
           </h2>
           <p className="text-muted-light text-base sm:text-lg max-w-2xl leading-relaxed text-pretty">
-            Nuestras actividades combinan explicaciones conceptuales, práctica con herramientas y
-            espacios de intercambio entre estudiantes.
+            Nuestras sesiones combinan teoría al grano, práctica en vivo con herramientas reales y
+            espacios para resolver dudas entre todos.
           </p>
         </motion.div>
 
